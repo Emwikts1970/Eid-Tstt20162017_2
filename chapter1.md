@@ -3,7 +3,14 @@
 description : Dieses Testat besteht aus einem Kapitel mit insgesamt 11 Aufgaben. Die Aufgaben können unabhängig voneinander gelöst werden. Wir empfehlen Ihnen jedoch die Bearbeitung in der vorgegebenen Reihenfolge. <br> Beachten Sie, dass gelöste Aufgaben abhängig vom Schwierigkeitsgrad mit 100XP, 150XP oder 200XP belohnt werden. Lösungen, die bis 20 Uhr eingereicht sind werden akzeptiert.
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
-## A Loop & a Dummy
+## Schleife & Dummy
+
+Erinnern Sie sich an das letzte R-Testat: Sie haben eine Dummyregression des Stundenlohns auf das Geschlecht durchgeführt.
+
+In dieser Aufgabe sollen Sie sich mit dem folgenden Zusammenhang befassen:
+
+
+
 
 Instead of using the regressor $CS$, we might be interested in running a regression where the regressor, $D$ say, is binary variable or a so-called dummy variable. 
 
