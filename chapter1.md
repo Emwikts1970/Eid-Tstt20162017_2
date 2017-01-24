@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8493a6fed2
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:874a469b1d
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:eb84bf71fe
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:842cb82b5b
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -219,7 +219,7 @@ Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor d
 
 ```{r}
 
-betaw <- function(Y) {
+beta.w <- function(Y) {
     n <- length(Y)
     w <- ???
     return(crossprod(w,y)) # Skalarprodukt von w und y
@@ -227,7 +227,7 @@ betaw <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5ace018c94
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -235,7 +235,27 @@ Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
 <br>
 Sind die klassischen OLS-Annahmen erfüllt und die Fehlerterme homoskedastisch, so ist der OLS-Schätzer am effizientesten in der Klasse der linearen und bedingt unverrten Schätzer, d.h. es gibt keinen anderen qualifizierten Schätzer mit einer geringeren Varianz.
 
-Sie sollen dies Anhand einer Simulationsstudie für die zuvor behandelten Schätzfunktionen `OLS` und `betaw` verdeutlichen. 
+Sie sollen dies Anhand einer Simulationsstudie für die zuvor erstellten Schätzfunktionen `OLS` und `betaw` verdeutlichen:
+
+Zunächst:
+
+1. Erstellen Sie einen Vektor `Y` mit 100 Zufallszahlen aus einer $N(0,1)$-Verteilung.
+2. Berechnen Sie die Schätzer mit den Funktionen `OLS` und `beta.w`. Speichern Sie die Resultate jeweils an der $i$-ten Stelle der Vektoren `ols` und `weighted.w`.
+3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,100$
+
+***=instructions
+Ein Schema für die
+
+-  
+
+***=sample_code
+```{r}
+for (i in 1:???) {
+  y <- 
+  ols[???] <- 
+  weighted.w[???] <- 
+}
+```
 
 *** =pre_exercise_code
 ```{r}
