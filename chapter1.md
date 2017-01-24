@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:ae79ef2d7e
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -93,7 +93,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5e4ebd8570
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -132,7 +132,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:81070b024e
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -165,7 +165,7 @@ d.h. eine Regression der variable $Y$ auf eine Konstante. Anders gesagt: Der ein
 
 $$X = (1 \dots 1)'.$$
 
-In `script.R` finden Sie eine Funktion, welchen den OLS-Schätzer für $\beta\_0$ in diesem Modell berechnen soll. Allerdings ist die Funktion fehlerhaft programmiert: Dieser Schätzer ist zwar linear aber *nicht unverzerrt* und entspricht nicht der OLS
+In `script.R` finden Sie eine Funktion, welchen den OLS-Schätzer für $\beta\_0$ in diesem Modell berechnen soll. Allerdings ist die Funktion fehlerhaft programmiert: Dieser Schätzer ist zwar linear aber *nicht unverzerrt* und entspricht nicht der OLS-Lösung.
 
 *** =instructions
 
@@ -180,7 +180,7 @@ Passen Sie den Code der Funktion `OLS` im `script.R` an, sodass der OLS-Schätze
 
 ```{r}
 OLS <- function(Y) {
-    beta0 <- sum(Y)
+    beta0 <- 1/length(y)*sum(Y)+sd(Y)
     return(beta0)
 } 
 ```
@@ -190,7 +190,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:becbc8a58f
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:726a6d460b
 ## A Simulation Study I
 
 Suppose you got the regression model
