@@ -31,7 +31,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=sample_code
 ```{r}
-# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0 und beta1
+# Berechnen Sie den Schätzer, speichern Sie das Ergebnis in beta0 und beta1
 
 ```
 
@@ -45,7 +45,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:67b224253d
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -92,7 +92,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:a0892b1593
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -131,7 +131,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:159a3b3ebe
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -158,7 +158,7 @@ Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regress
 
 Angenommen Sie betrachten das Regressionsmodel
 
-$$ y\_i=\beta\_0 + \epsilon\_i $$
+$$ y\_i=\beta\_0 + \epsilon\_i \ \ , \ \ \epsilon \sim (0,\sigma^2) $$
 
 d.h. eine Regression der variable $Y$ auf eine Konstante. Anders gesagt: Der einzige Regressor ist ein Vektor mit Einsen
 
@@ -189,7 +189,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:95182e4ae3
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:726a6d460b
 ## A Simulation Study I
 
 Suppose you got the regression model
