@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d852a9d5f6
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -74,7 +74,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ***=instructions
 
 - Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Speichern Sie das Ergebnis in `tstat`
-- Überprüfen Sie anhand logischer operatoren, ob der absolutbetrag von `tstat` den kritischen Wert 
+- Überprüfen Sie anhand logischer Operatoren, ob der Absolutbetrag von `tstat` den kritischen Wert zum 5\%-Niveau überschreitet. 
 
 ***=hint
 
@@ -93,7 +93,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:f4130fbdf9
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Signifikant verschieden
 
 
