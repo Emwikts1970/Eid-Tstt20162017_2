@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:9228555434
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ Bei Heteroskedastie robuste Schätzer für die Varianz-Kovarianz-Matrix von Regr
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:0d6aa008bb
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Robuste Standardfehlerschätzung
 
 In der letzten Aufgabe haben Sie gesehen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -106,6 +106,18 @@ zum $5\%$-Niveau nicht signifikant von $0$ verschieden ist.
 Betrachten Sie erneut den Plot: Eine weitere Auffälligkeit in den Daten ist, dass die Streuung der erreichten XP mit dem investierten Zeitaufwand zunimmt, d.h. es liegt Heteroskedastie vor.
 
 Sie sind besorgt über die Korrektheit der zuvor getroffenen Schlussfolgerung bzgl. der Signifikanz von $\beta\_0$ und wollen daher den Test mit heteroskedastie-robusten Standardfehlern wiederholen.
+
+*** =pre_exercise_code
+```{r}
+set.seed(2)
+n <- 105
+x <- runif(n,0,24)
+y <- rep(NA,n)
+for(i in 1:n) {
+  y[i] <- 100 + 60 * x[i] + rnorm(1, sd=20*x[i])
+}
+plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
+```
 
 ***=instructions
 
