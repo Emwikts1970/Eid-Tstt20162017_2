@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:23618c3026
 ## Übung macht den Meister 
 
 Beim Betrachten der Daten kommt Ihnen etwas merkwürdig vor: Es scheint so, als ob die im Mittel erzielte XP nicht wesentlich vom investierten Zeitaufwand abhängt.
