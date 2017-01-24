@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c663c8dd37
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5ff88c7cf0
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:bf7ed2d2d4
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5c7d124a50
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer!
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -222,7 +222,7 @@ Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor d
 betaw <- function(Y) {
     n <- length(Y)
     w <- ???
-    crossprod(w,y)
+    return(crossprod(w,y))
 }
 
 ```
