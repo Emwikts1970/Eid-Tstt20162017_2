@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:20c992f06d
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -78,10 +78,11 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=hint
 
+Bei Heteroskedastie robuste Schätzer für die Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
 ***=sample_code
 ```{r}
-# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0 und beta1.
+# Berechnen Sie den Schätzer, speichern sie die Ergebnisse in beta0 und beta1.
 
 ```
 
@@ -93,9 +94,22 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:4c69aaa88d
-## Signifikant verschieden
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+## Robuste Standardfehlerschätzung
 
+In der letzten Aufgabe haben Sie gesehen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
 
+$$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i $$
+
+zum $5\%$-Niveau nicht signifikant von $0$ verschieden ist.
+
+Betrachten Sie erneut den Plot: Eine weitere Auffälligkeit in den Daten ist, dass die Streuung der erreichten XP mit dem investierten Zeitaufwand zunimmt, d.h. es liegt Heteroskedastie vor.
+
+Sie sind besorgt über die Korrektheit der zuvor getroffenen Schlussfolgerung bzgl. der Signifikanz von $\beta\_0$ und wollen daher den Test mit heteroskedastie-robusten Standardfehlern wiederholen.
+
+***=instructions
+
+- Laden Sie die Pakete `sandwich` und `lmtest`
+- Führen Sie nun erneut einen Signifikanztest für $\beta\_0$ durch. Benutzen Sie dafür die Funktion `coeftest` in Kombination mit einem robusten Schätzer für die Varianz-Kovarianz-Matrix der geschätzten Koeffizienten. 
 
 
