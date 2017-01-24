@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:7901b67ea8
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -73,7 +73,8 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=instructions
 
-Berechnen Sie zunächst die passende $t$-Statistik zum Test $H_0: \beta\_0=0$. Speichern Sie das Ergebnis in `tstat`
+- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H_0: \beta\_0=0 \ vs \ H_1: \beta\_0\neq 0$. Speichern Sie das Ergebnis in `tstat`
+- Überprüfen Sie anhand logischer operatoren, ob der absolutbetrag von `tstat` den kritischen Wert 
 
 ***=hint
 
@@ -92,7 +93,7 @@ Berechnen Sie zunächst die passende $t$-Statistik zum Test $H_0: \beta\_0=0$. S
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:72d202a635
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Signifikant verschieden
 
 
