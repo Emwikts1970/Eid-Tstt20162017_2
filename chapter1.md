@@ -34,7 +34,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=sample_code
 ```{r}
-# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0 und beta1.
+# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0 und beta1
 
 ```
 
@@ -48,7 +48,7 @@ beta0 <- 2
 test_object(beta0)
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:cf422d4837
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -95,7 +95,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:217d4a1a3b
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -134,7 +134,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:3ba5a11980
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -192,7 +192,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:586a9fb604
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:726a6d460b
 ## A Simulation Study I
 
 Suppose you got the regression model
