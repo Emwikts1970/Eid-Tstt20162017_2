@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:be9704c1c0
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:7359c004c8
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:4e82eb832c
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:3bdd77914d
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer!
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -207,19 +207,22 @@ als linear und unverzerrt bezeichnet wird.
 In dieser Aufgabe sollen Sie eine Schätzfunktion für $\beta\_0$ erstellen deren Gewichte $a\_i$ von denen der OLS-Lösung abweichen, genauer
 
 $$ \overset{\sim}{\beta}\_w = \sum\_{i=1}^n w\_i Y\_i \ \ \text{wobei} \ \ w_i = \begin{cases}
-\frac{1 + \epsilon}{n} & \text{wenn} \ n \leq n/2 \\\\ 1/n & \text{sonst} \end{cases} $$
+\frac{1 + \epsilon}{n} & \text{wenn} \ n \leq n/2 \\\\ 1/n & \text{sonst} \end{cases} $$;
 
+weiterhin gelte $\epsilon = 0.8$.
 
 *** =instructions
-Betrachten Sie den vorgegebenen Code in `script.R`
+Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br> <b>Hinweis</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`.
 
 
 ***=sample_code
 
 ```{r}
 
-w.estimator <- function(Y) {
-
+betaw <- function(Y) {
+    n <- length(Y)
+    w <- ???
+    crossprod(w,y)
 }
 
 ```
