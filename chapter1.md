@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:9228555434
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ Bei Heteroskedastie robuste Schätzer für die Varianz-Kovarianz-Matrix von Regr
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:0d6aa008bb
 ## Robuste Standardfehlerschätzung
 
 In der letzten Aufgabe haben Sie gesehen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
