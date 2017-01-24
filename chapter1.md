@@ -9,7 +9,7 @@ Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen
 
 Sie interessieren sich für das folgende Model:
 
-$$ XP\_i = \beta\_0 + \epsilon\_i  $$
+$$ XP\_i = \beta\_0 + \beta\_1 \times Z +  \epsilon\_i  $$
 
 *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:db0eb31b7a
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister 
 
 Beim Betrachten der Daten kommt Ihnen etwas merkwürdig vor: Es scheint so, als ob die im Mittel erzielte XP nicht wesentlich vom investierten Zeitaufwand abhängt.
