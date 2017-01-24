@@ -10,7 +10,7 @@ Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen
 
 Sie interessieren sich für das folgende Model:
 
-$$ XP\_i = \beta_\0 + \epsilon\_i  $$
+$$ XP\_i = \beta\_0 + \epsilon\_i  $$
 
 
 
