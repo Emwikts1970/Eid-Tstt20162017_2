@@ -12,12 +12,11 @@ Sie interessieren sich für das folgende Model:
 
 $$ XP\_i = \beta\_0 + \epsilon\_i  $$
 
-
+*Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
 ***=instructions
 
-Berechnen Sie den OLS schätzer  
-
+Berechnen Sie den OLS-Schätzer für $\beta\_0$. Speichern Sie das Resultat in `beta0`.
 
 *** =pre_exercise_code
 ```{r}
@@ -35,7 +34,7 @@ plot(Z[XP<=1500&XP>=150],XP[XP<=1500&XP>=150], pch=20, col="steelblue", xlab="Ze
 
 ***=sample_code
 ```{r}
-# Create D
+# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0
 
 ```
 
