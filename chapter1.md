@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:ea6ed41ad8
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -78,7 +78,6 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=hint
 
-Bei Heteroskedastie robuste Schätzer für die Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
 ***=sample_code
 ```{r}
@@ -94,18 +93,21 @@ Bei Heteroskedastie robuste Schätzer für die Varianz-Kovarianz-Matrix von Regr
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:3a77e31f88
-## Robuste Standardfehlerschätzung
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+## Heteroskedastie I
 
-In der letzten Aufgabe haben Sie gesehen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
+In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
 
 $$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i $$
 
-zum $5\%$-Niveau nicht signifikant von $0$ verschieden ist.
+zum $5\%$-Niveau nicht signifikant von $0$ verschieden ist, wenn ein *nur bei Homoskedastie* konsistenter Standardfehler berechnet wird.
 
 Betrachten Sie erneut den Plot: Eine weitere Auffälligkeit in den Daten ist, dass die Streuung der erreichten XP mit dem investierten Zeitaufwand zunimmt, d.h. es liegt Heteroskedastie vor.
-
+<br>
 Sie sind besorgt über die Korrektheit der zuvor getroffenen Schlussfolgerung bzgl. der Signifikanz von $\beta\_0$ und wollen daher den Test mit heteroskedastie-robusten Standardfehlern wiederholen.
+
+*Die Vektoren `XP` und `Z` sowie das model `mod` aus der letzten Aufgabe sind in Ihrer Arbeitsumgebung verfügbar.*
+
 
 *** =pre_exercise_code
 ```{r}
@@ -121,7 +123,20 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=instructions
 
-- Laden Sie die Pakete `sandwich` und `lmtest`
-- Führen Sie nun erneut einen Signifikanztest für $\beta\_0$ durch. Benutzen Sie dafür die Funktion `coeftest` in Kombination mit einem robusten Schätzer für die Varianz-Kovarianz-Matrix der geschätzten Koeffizienten. 
+- Laden Sie das Paket `sandwich`.
+- Führen Sie eine heteroskedastie-robuste Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten durch. Speichern Sie die Matrix in `hcm`.
+- Vergewissern Sie sich, dass es sich um eine symmetrische $2\times 2$-Matrix handelt.
 
+
+***=hint
+
+Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+## Heteroskedastie II
+
+***=instructions
+
+- Laden Sie nun zusätzlich das Paket `lmtest`
+- Führen Sie nun erneut einen Signifikanztest für $\beta\_0$ durch. Benutzen Sie dafür die Funktion `coeftest` in Kombination mit einem robusten Schätzer für die Varianz-Kovarianz-Matrix der geschätzten Koeffizienten. 
 
