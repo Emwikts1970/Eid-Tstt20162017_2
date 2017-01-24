@@ -9,7 +9,7 @@ Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen
 
 Sie interessieren sich für das folgende Model:
 
-$$ XP\_i = \beta\_0 + \beta\_1 \times Z +  \epsilon\_i  $$
+$$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i  $$
 
 *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
@@ -46,12 +46,12 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c2bf2a2380
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
 
-$$ XP\_i = \beta\_0 + \beta\_1 \times Z +  \epsilon\_i. $$
+$$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i. $$
 
 Beim Betrachten des Plots kommt Ihnen etwas merkwürdig vor: Es scheint so, als ob die im Mittel erzielte XP zwar mit der investierten Zeit steigt, allerdings scheinen Studenten ohne Vorbereitungszeit mehr als 100XP zu erzielen.
 
@@ -93,7 +93,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:3bbf76462f
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Signifikant verschieden
 
 
