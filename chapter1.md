@@ -46,7 +46,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:f74f4f7a4a
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -93,7 +93,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:a0a5c93c96
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -132,7 +132,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:fa9b3cb113
 ## Heteroskedastie II
 
 ***=instructions
@@ -190,7 +190,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:726a6d460b
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:07f3ad2e4a
 ## A Simulation Study I
 
 Suppose you got the regression model
