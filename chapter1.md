@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:55a978fa6e
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:7bce9e44bf
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:dadce628bf
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:9db219e42f
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer!
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -203,15 +203,23 @@ Aus der Vorlesung wissen Sie, dass ein Schätzer $\overset{\sim}{\beta}$ mit
 $$ \overset{\sim}{\beta} = \sum\_{i=1}^N a\_i y_i \ \ \text{und} \ \ \text{E}(\overset{\sim}{\beta}|X\_1,\dots, X\_n)=\beta $$
 
 als linear und unverzerrt bezeichnet wird.
+<br>
+In dieser Aufgabe sollen Sie eine Schätzfunktion für $\beta\_0$ erstellen deren Gewichte $a\_i$ von denen der OLS-Lösung abweichen.
 
-In the plotting area on the right You see the result of a *Monte Carlo Simulation* analysing distributional properties of the OLS estimator for $ \beta $ in the model above and another linear estimator $\overset{\sim}{\beta}$ which uses different weights than OLS. Say, $\beta=0$. 
-
-Is the result consistent with what You expect beeing aware of the Gauss-Markov Theorem?  
 
 *** =instructions
-- Yes, both estimators seem to be unbiased but the OLS estimator has less dispersion.
-- No, the distribution of $\overset{\sim}{\beta}$ looks more like a standard normal distribution.
-- Cannot be answered without prior inspection of the underlying data.
+Betrachten Sie den vorgegebenen Code in `script.R`
+
+
+***=sample_code
+
+```{r}
+
+w.estimator <- function(Y) {
+
+}
+
+```
 
 *** =pre_exercise_code
 ```{r}
@@ -223,7 +231,7 @@ reps <- 1e5
 # Choose epsilon and create a vector of weights as defined above
 
 epsilon <- 0.8
-w <- c( rep((1+epsilon)/n,n/2), rep((1-epsilon)/n,n/2) )
+w <- c( rep((1+epsilon)/n,n/2))
 
 # Draw random sample y_1,...,y_N from the standard normal distribution 
 # Compute both estimates 1e6 times and store the result in vectors  
@@ -248,9 +256,6 @@ legend('topright', c("OLS","Weighted"), col=c("purple","steelblue"),lwd=3)
 ```
 *** =sct
 ```{r}
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly!"
-test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad, msg_bad))
 ```
 
 
