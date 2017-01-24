@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:1140f74539
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5c3d1cff2c
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:563e73cede
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8d65785269
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +227,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:9b693f3880
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -237,7 +237,7 @@ Sind die klassischen OLS-Annahmen erfüllt und die Fehlerterme homoskedastisch, 
 
 Sie sollen dies Anhand einer Simulationsstudie für die zuvor erstellten Schätzfunktionen `OLS` und `betaw` verdeutlichen:
 
-Zunächst:
+Die Simulation soll die folgenden Arbeitsschritte umfassen:
 
 1. Erstellen Sie einen Vektor `Y` mit 100 Zufallszahlen aus einer $N(0,1)$-Verteilung.
 2. Berechnen Sie die Schätzer mit den Funktionen `OLS` und `beta.w`. Speichern Sie die Resultate jeweils an der $i$-ten Stelle der Vektoren `ols` und `weighted.w`.
@@ -246,11 +246,15 @@ Zunächst:
 *Die Funktionen `OLS` und `betaw` sind in ihrer Arbeitsumgebung verfügbar!*
 
 ***=instructions
-Ein Code-Gerüst für die obige Prozedur ist vorgegeben. Ersetzen Sie die `???` mit den korrekten Ausdrücken!
+- Initialisieren Sie zunächst die Vektoren `ols` und `weighted.w`, sodass beide Vektoren $100$ Einträge `NA` aufweisen.
+- Ein Code-Gerüst für die obige Prozedur ist vorgegeben. Ersetzen Sie die `???` mit den korrekten Ausdrücken!
 
 ***=sample_code
 ```{r}
 custom_seed(1234) # nicht von Relevanz
+
+# Initialisieren Sie die Vektoren ols und weighted.w
+
 
 # Simulation
 for (i in 1:???) {
