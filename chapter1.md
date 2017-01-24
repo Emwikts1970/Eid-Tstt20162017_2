@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:2784d3d4fc
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:6bad59e9ce
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:5b93324c30
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:ee7af3b0f4
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer!
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -200,11 +200,14 @@ $$ Y\_i=\beta\_0 + \epsilon\_i \ \ , \ \ \epsilon \sim (0,\sigma^2). $$
 
 Aus der Vorlesung wissen Sie, dass ein Schätzer $\overset{\sim}{\beta}$ mit
 
-$$ \overset{\sim}{\beta} = \sum\_{i=1}^N a\_i y\_i \ \ \text{und} \ \ \text{E}(\overset{\sim}{\beta}|X\_1,\dots, X\_n)=\beta $$
+$$ \overset{\sim}{\beta} = \sum\_{i=1}^n a\_i y\_i \ \ \text{und} \ \ \text{E}(\overset{\sim}{\beta}|X\_1,\dots, X\_n)=\beta $$
 
 als linear und unverzerrt bezeichnet wird.
 <br>
-In dieser Aufgabe sollen Sie eine Schätzfunktion für $\beta\_0$ erstellen deren Gewichte $a\_i$ von denen der OLS-Lösung abweichen.
+In dieser Aufgabe sollen Sie eine Schätzfunktion für $\beta\_0$ erstellen deren Gewichte $a\_i$ von denen der OLS-Lösung abweichen, genauer
+
+$$ \overset{\sim}{\beta}\_w = \sum\_{i=1}^n w\_i Y\_i \ \ \text{wobei} \ \ w_i = \begin{cases}
+\frac{1 + \epsilon}{n} & \text{wenn} n \leq n/2 \\ 1/2 & \text{sonst} \end{cases} $$
 
 
 *** =instructions
