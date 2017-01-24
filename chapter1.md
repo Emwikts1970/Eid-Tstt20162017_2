@@ -46,10 +46,10 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:0bd327bce3
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
-Befassen Sie sich weiter hin mit dem Modell
+Sie befassen sich weiterhin mit dem Modell
 
 $$ XP\_i = \beta\_0 + \beta\_1 \times Z +  \epsilon\_i. $$
 
@@ -92,7 +92,7 @@ Berechnen Sie zunächst die passende $t$-Statistik zum Test $H_0: \beta\_0=0$. S
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:bc2416e970
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Signifikant verschieden
 
 
