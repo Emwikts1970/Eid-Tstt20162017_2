@@ -6,7 +6,7 @@ description : Dieses Testat besteht aus einem Kapitel mit insgesamt 11 Aufgaben.
 ## Testatpunkte
 
 
-Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen Sie arbeiten als unterbezahlter Hiwi am Lehrstuhl für Ökonometrie und Ihnen liegen Beobachtungen zur erreichten XP sowie investierter Zeit vor. In ihrer Schusseligkeit haben Sie einen zufälligen Teil der Daten unwiederbringlich gelöscht und müssen nun Regressionsanalyse & Inferenzstatistik anhand einer Stichprobe betreiben. Der Zusammenhang wird im Plot-Panel dargestellt.
+Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen Sie arbeiten als unterbezahlter Hiwi am Lehrstuhl für Ökonometrie und Ihnen liegen Beobachtungen zur erreichten XP (`XP`) sowie investierter Zeit (`Z`) vor. In ihrer Schusseligkeit haben Sie einen zufälligen Teil der Daten unwiederbringlich gelöscht und müssen nun Regressionsanalyse & Inferenzstatistik anhand einer Stichprobe betreiben. Der Zusammenhang wird im Plot-Panel dargestellt.
 
 Sie interessieren sich für das folgende Model:
 
@@ -24,12 +24,10 @@ Berechnen Sie den OLS schätzer
 set.seed(2)
 n <- 300
 x <- rnorm(n)
-z <- runif(n,0,24)
-u <- (10+5*z)*rnorm(n,sd=6)
+Z <- runif(n,0,24)
+u <- (10+5*Z)*rnorm(n,sd=6)
 XP <- 500 + 60*x + u
-plot(z[XP<=1500&XP>=150],XP[XP<=1500&XP>=150], pch=20, col="steelblue", xlab="Zeitaufwand", ylab="XP", ylim = c(0,1500))
-
-
+plot(Z[XP<=1500&XP>=150],XP[XP<=1500&XP>=150], pch=20, col="steelblue", xlab="Zeitaufwand", ylab="XP", ylim = c(0,1500))
 ```
 
 ***=hint
