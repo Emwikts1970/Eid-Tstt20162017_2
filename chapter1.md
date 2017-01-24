@@ -34,7 +34,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=sample_code
 ```{r}
-# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0
+# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0 und beta1.
 
 ```
 
@@ -46,23 +46,54 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d89276b2e0
-## Übung macht den Meister 
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+## Übung macht den Meister? 
 
-Beim Betrachten der Daten kommt Ihnen etwas merkwürdig vor: Es scheint so, als ob die im Mittel erzielte XP nicht wesentlich vom investierten Zeitaufwand abhängt.
+Befassen Sie sich weiter hin mit dem Modell
+
+$$ XP\_i = \beta\_0 + \beta\_1 \times Z +  \epsilon\_i. $$
+
+Beim Betrachten des Plots kommt Ihnen etwas merkwürdig vor: Es scheint so, als ob die im Mittel erzielte XP zwar mit der investierten Zeit steigt, allerdings scheinen Studenten ohne Vorbereitungszeit mehr als 100XP zu erzielen.
+
+Nun interessiert es Sie, ob die erwartete Punktzahl für Studenten, die gar keine Zeit investiert haben, signifikant von 0 verschieden ist. Hierzu möchten Sie einen $t$-Test durchführen.
 
 *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
 *** =pre_exercise_code
 ```{r}
 set.seed(2)
-n <- 300
-x <- rnorm(n)
-Z <- runif(n,0,24)
-u <- (10+5*Z)*rnorm(n,sd=6)
-XP <- 500 + 60*x + u
-plot(Z[XP<=1500&XP>=150],XP[XP<=1500&XP>=150], pch=20, col="steelblue", xlab="Zeitaufwand", ylab="XP", ylim = c(0,1500))
+n <- 105
+x <- runif(n,0,24)
+y <- rep(NA,n)
+for(i in 1:n) {
+  y[i] <- 100 + 60 * x[i] + rnorm(1, sd=20*x[i])
+}
+plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
+
+***=instructions
+
+Berechnen Sie zunächst die passende $t$-Statistik zum Test $H_0: \beta\_0=0$. Speichern Sie das Ergebnis in `tstat`
+
+***=hint
+
+
+***=sample_code
+```{r}
+# Berechnen Sie den Schätzer, speichern sie das Ergebnis in beta0 und beta1.
+
+```
+
+***=solution
+```{r}
+```
+
+*** =sct
+```{r}
+```
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+## Signifikant verschieden
 
 
 
