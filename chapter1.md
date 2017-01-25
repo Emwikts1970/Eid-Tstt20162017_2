@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:90c0130a8c
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:6c81cc90ea
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:319ab3db8d
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:b04836e907
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +227,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:7bc9915939
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -268,7 +268,7 @@ for (i in 1:???) {
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:b6ec1b397e
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
@@ -283,7 +283,7 @@ $$ \text{Var}(\widehat{\beta}\_{OLS}) \leq \text{Var}(\overset{\sim}{\beta}\_{w}
 - Vervollständigen Sie die Befehle zum Erstellen der Histogramme. <b>Hinweis</b>: Beide Histogramme sollen übereinander gezeichnet werden. Mit `col = alpha("red",0.6)` wird die Farbe Rot mit einem Deckungsgrad von 60\% gesetzt.
 - Berechnen Sie *ein* geeignetes Streuungsmaß für die simulierte Verteilung beider Punktschätzer und speichern Sie dieses jeweils in `sd.ols` und `sd.weighted.w`. Überprüfen Sie mit logischen Operatoren, ob Sie die obige Aussage des Gauss-Markov-Theorems bestätigen können.
 
-***pre_exercise_code
+***=pre_exercise_code
 
 ```{r}
 n <- 5000
