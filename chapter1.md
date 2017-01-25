@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:d10d280225
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:ebe622f62a
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
+--- type:NormalExercise lang:r xp:100 skills:1 key:5e20c09f87
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
+--- type:NormalExercise lang:r xp:100 skills:1 key:2b7ad7c34c
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +227,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
+--- type:NormalExercise lang:r xp:100 skills:1 key:fbdfc22629
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -298,7 +298,7 @@ abline(v=0,lty=2)
 legend('topright', c("OLS","Weighted"), col=c("purple","steelblue"),lwd=3)
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
+--- type:NormalExercise lang:r xp:100 skills:1 key:12ef51ab67
 ## Das Gauss-Markov-Theorem I
 
 Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
