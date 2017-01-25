@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8cd7f61f8d
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8a7ce678af
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:e373756181
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:a5de6c1452
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +227,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:db724061c9
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -266,22 +266,9 @@ for (i in 1:???) {
 
 *** =pre_exercise_code
 ```{r}
-n <- 100
-epsilon <- 0.8
-w <- c(rep((1+epsilon)/n,n/2),rep(1/n,n/2))
-
-ols <- rep(NA,100)
-weighted.w <- rep(NA,100)
-
-custom_seed(1234)
-for (i in 1:100) {
-  y <- rnorm(100)
-  ols[i] <- mean(y)
-  weightedestimator[i] <- crossprod(w,y)
-}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:313855a7b4
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
@@ -295,6 +282,24 @@ $$ \text{Var}(\widehat{\beta}\_{OLS}) \leq \text{Var}(\overset{\sim}{\beta}\_{w}
 ***=instructions
 - Vervollständigen Sie die Befehle zum Erstellen der Histogramme. <b>Hinweis</b>: Beide Histogramme sollen übereinander gezeichnet werden. Mit `col = alpha("red",0.6)` wird die Farbe Rot mit einem Deckungsgrad von 60\% gesetzt.
 - Berechnen Sie *ein* geeignetes Streuungsmaß für die simulierte Verteilung beider Punktschätzer und speichern Sie dieses jeweils in `sd.ols` und `sd.weighted.w`. Überprüfen Sie mit logischen Operatoren, ob Sie die obige Aussage des Gauss-Markov-Theorems bestätigen können.
+
+***pre_exercise_code
+
+```{r}
+n <- 5000
+epsilon <- 0.8
+w <- c(rep((1+epsilon)/n,n/2),rep(1/n,n/2))
+
+ols <- rep(NA,5000)
+weighted.w <- rep(NA,5000)
+
+custom_seed(1234)
+for (i in 1:5000) {
+  y <- rnorm(5000)
+  ols[i] <- mean(y)
+  weighted.w[i] <- crossprod(w,y)
+}
+```
 
 ***=sample_code
 
