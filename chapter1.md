@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:2fcdd90eb7
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:773a1f3ca7
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:ea9ab72bfa
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:a9684f75f2
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +227,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:03338195ae
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -246,7 +246,7 @@ Die Simulation soll die folgenden Arbeitsschritte umfassen:
 *Die Funktionen `OLS` und `betaw` sind in ihrer Arbeitsumgebung verfügbar!*
 
 ***=instructions
-- Initialisieren Sie zunächst die Vektoren `ols` und `weighted.w`, sodass beide Vektoren $100$ Einträge `NA` aufweisen.
+- Initialisieren Sie zunächst die Vektoren `ols` und `weighted.w`, sodass beide Vektoren $5000$ Einträge `NA` aufweisen.
 - Ein Code-Gerüst für die obige Prozedur ist vorgegeben. Ersetzen Sie die `???` mit den korrekten Ausdrücken!
 
 ***=sample_code
@@ -268,7 +268,7 @@ for (i in 1:???) {
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:e4413c1335
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
