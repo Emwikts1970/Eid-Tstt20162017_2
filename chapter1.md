@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:74a8efa645
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:3c1c566575
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d96f21bb1c
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:9c8f331f91
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,8 +227,8 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:6931eb3079
-## Das Gauss-Markov-Theorem
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
+## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
 <br>
@@ -258,9 +258,9 @@ custom_seed(1234) # nicht von Relevanz
 
 # Simulation
 for (i in 1:???) {
-  y <- 
-  ols[???] <- 
-  weighted.w[???] <- 
+  y <- ???
+  ols[???] <- ???
+  weighted.w[???] <- ???
 }
 ```
 
@@ -298,5 +298,11 @@ abline(v=0,lty=2)
 legend('topright', c("OLS","Weighted"), col=c("purple","steelblue"),lwd=3)
 ```
 
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
+## Das Gauss-Markov-Theorem I
+
+Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
+Gemäß dem Gauss-Markov-Theorem können Sie erwarten, dass 
+$$ \text{Var}(\widehat{\beta}\_{OLS}) \leq \text{Var}(\overset{\sim}{\beta\_{w}). $$
 
 
