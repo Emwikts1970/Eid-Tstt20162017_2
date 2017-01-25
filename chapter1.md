@@ -47,7 +47,7 @@ beta <- 2
 test_object("beta")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:e173e65b20
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +94,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8233a8fd54
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +133,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d69aae62db
+--- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +191,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:34bda89e70
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +227,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:0fad573259
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -241,7 +241,7 @@ Die Simulation soll die folgenden Arbeitsschritte umfassen:
 
 1. Erstellen Sie einen Vektor `Y` mit 100 Zufallszahlen aus einer $\mathcal{N}(0,1)$-Verteilung.
 2. Berechnen Sie die Schätzer mit den Funktionen `OLS` und `beta.w`. Speichern Sie die Resultate jeweils an der $i$-ten Stelle der Vektoren `ols` und `weighted.w` ab.
-3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,100$
+3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,5000$
 
 *Die Funktionen `OLS` und `betaw` sind in ihrer Arbeitsumgebung verfügbar!*
 
@@ -266,43 +266,48 @@ for (i in 1:???) {
 
 *** =pre_exercise_code
 ```{r}
-# Set sample size and number of repititionas
-
-n <- 100      
-reps <- 10
-
-# Choose epsilon and create a vector of weights as defined above
-
+n <- 100
 epsilon <- 0.8
 w <- c(rep((1+epsilon)/n,n/2),rep(1/n,n/2))
 
-# Draw random sample y_1,...,y_N from the standard normal distribution 
-# Compute both estimates 1e6 times and store the result in vectors  
-
-ols <- rep(NA,reps)
-weightedestimator <- rep(NA,reps)
+ols <- rep(NA,100)
+weighted.w <- rep(NA,100)
 
 custom_seed(1234)
-for (i in 1:reps)
-{
-  y <- rnorm(n)
+for (i in 1:100) {
+  y <- rnorm(100)
   ols[i] <- mean(y)
   weightedestimator[i] <- crossprod(w,y)
 }
-
-# Plot estimates of the estimators distribution 
-
-plot(density(ols),col="purple", lwd=3, main="Density of OLS and Weighted Estimator",xlab="")
-lines(density(weightedestimator),col="steelblue", lwd=3) 
-abline(v=0,lty=2)
-legend('topright', c("OLS","Weighted"), col=c("purple","steelblue"),lwd=3)
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:d0a92ed0ed
+--- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Das Gauss-Markov-Theorem I
 
 Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
 Gemäß dem Gauss-Markov-Theorem können Sie erwarten, dass 
-$$ \text{Var}(\widehat{\beta}\_{OLS}) \leq \text{Var}(\overset{\sim}{\beta}\_{w}).  $$
+$$ \text{Var}(\widehat{\beta}\_{OLS}) \leq \text{Var}(\overset{\sim}{\beta}\_{w}). $$
+
+`script.R` enthält einen Vorschlag, wie Sie dies grafisch veranschaulichen können.
+
+* Die Vektoren `ols` und `weighted.w` aus der letzten Aufgabenstellung sind in ihrer Arbeitsumgebung verfügbar.
+
+***=instructions
+- Vervollständigen Sie die Befehle zum Erstellen der Histogramme. <b>Hinweis</b>: Beide Histogramme sollen übereinander gezeichnet werden. Mit `col = alpha("red",0.6)` wird die Farbe Rot mit einem Deckungsgrad von 60\% gesetzt.
+- Berechnen Sie *ein* geeignetes Streuungsmaß für die simulierte Verteilung beider Punktschätzer und speichern Sie dieses jeweils in `sd.ols` und `sd.weighted.w`. Überprüfen Sie mit logischen Operatoren, ob Sie die obige Aussage des Gauss-Markov-Theorems bestätigen können.
+
+***=sample_code
+
+```{r}
+# Histogramme plotten
+library(scales)
+hist(x = ???, freq = F, col = ???)
+hist(x = weighted.w, freq = F, add = ???, col = alpha("red",0.6))
+
+# Streuungsmaße vergleichen
+
+
+```
+
 
 
