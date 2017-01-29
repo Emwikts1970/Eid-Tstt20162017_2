@@ -23,12 +23,12 @@ Berechnen Sie die OLS-Schätzer für $\beta\_0$ und $\beta\_1$. Runden Sie die W
 ```{r}
 set.seed(2)
 n <- 105
-x <- runif(n,0,24)
-y <- rep(NA,n)
+Z <- runif(n,0,24)
+XP <- rep(NA,n)
 for(i in 1:n) {
-  y[i] <- 100 + 60 * x[i] + rnorm(1, sd=20*x[i])
+  XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
-plot(x,y, pch=20, col="Steelblue", cex=0.7, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
+plot(Z,XP, pch=20, col="Steelblue", cex=0.7, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
 
 ***=sample_code
@@ -39,8 +39,8 @@ plot(x,y, pch=20, col="Steelblue", cex=0.7, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=solution
 ```{r}
-beta0 <- round(lm(y ~ x)$coefficients[1],4)
-beta1 <- round(lm(y ~ x)$coefficients[2],4)
+beta0 <- round(lm(XP ~ Z)$coefficients[1],4)
+beta1 <- round(lm(XP ~ Z)$coefficients[2],4)
 ```
 
 *** =sct
