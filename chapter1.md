@@ -77,7 +77,6 @@ XP <- rep(NA,n)
 for(i in 1:n) {
   XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
-plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
 
 ***=instructions
@@ -160,19 +159,19 @@ zum $5\%$-Niveau nicht signifikant von $0$ verschieden ist, wenn ein *nur bei Ho
 
 Betrachten Sie erneut den Plot: Eine weitere Auffälligkeit in den Daten ist, dass die Streuung der erreichten XP mit dem investierten Zeitaufwand zunimmt, d.h. es liegt Heteroskedastie vor.
 <br>
-Sie sind besorgt über die Korrektheit der zuvor getroffenen Schlussfolgerung bzgl. der Signifikanz von $\beta\_0$ und wollen daher den Test mit heteroskedastie-robusten Standardfehlern wiederholen.
+Sie sind besorgt über die Korrektheit der zuvor getroffenen Schlussfolgerung und wollen daher den Test mit heteroskedastie-robusten Standardfehlern wiederholen.
 
-*Die Vektoren `XP` und `Z` sowie das Modell `mod` aus der letzten Aufgabe sind in Ihrer Arbeitsumgebung verfügbar.*
+*Die Vektoren `XP` und `Z` aus den letzten Aufgaben sind in Ihrer Arbeitsumgebung verfügbar.*
 
 
 *** =pre_exercise_code
 ```{r}
 set.seed(2)
 n <- 105
-x <- runif(n,0,24)
-y <- rep(NA,n)
+Z <- runif(n,0,24)
+XP <- rep(NA,n)
 for(i in 1:n) {
-  y[i] <- 100 + 60 * x[i] + rnorm(1, sd=20*x[i])
+  XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
 plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
@@ -180,13 +179,11 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ***=instructions
 
 - Laden Sie das Paket `sandwich`.
-- Führen Sie zunächst eine heteroskedastie-robuste Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten durch. Speichern Sie die Matrix in `hcm`.
+- Führen Sie zunächst eine heteroskedastie-robuste Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten durch. Speichern Sie die Matrix in `hcm`. <b>Hinweis</b> Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 - Vergewissern Sie sich, dass es sich bei `hcm` um eine symmetrische $2\times 2$-Matrix handelt.
 
 
-***=hint
 
-Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:1e07ad71cf
 ## Heteroskedastie II
