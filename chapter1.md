@@ -335,11 +335,6 @@ In `script.R` finden Sie eine Funktion, welche den OLS-Schätzer für $\beta\_0$
 
 Passen Sie den Code der Funktion `OLS` im `script.R` an, sodass der OLS-Schätzer für $\beta\_0$ numerisch korrekt berechnet wird.
 
-*** =pre_exercise_code
-```{r}
-
-```
-
 ***=solution
 
 ```{r}
@@ -362,7 +357,7 @@ OLS <- function(Y) {
 ```{r}
 fundef <- ex() %>% check_fun_def("OLS")
 fundef %>% check_arguments()
-fundef %>% check_call(seq(1,123,0.3)) %>% check_result()
+fundef %>% check_call("seq(1,123,0.3)") %>% check_result()
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e95912639a
