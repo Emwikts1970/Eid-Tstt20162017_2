@@ -205,7 +205,7 @@ mod <- lm(XP ~ Z)
 hcm <- vcovHC(mod, type = "HC0")
 
 # Prüfen Sie die Dimensionen von hcm
-
+dim(hcm)
 
 ```
 
