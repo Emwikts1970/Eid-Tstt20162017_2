@@ -58,7 +58,11 @@ $$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i. $$
 
 Beim Betrachten des Plots kommt Ihnen etwas merkwürdig vor: Es scheint so, als ob die im Mittel erzielte XP zwar mit der investierten Zeit steigt, allerdings scheinen Studenten ohne Vorbereitungszeit mehr als 100XP zu erzielen.
 
-Nun interessiert es Sie, ob die erwartete Punktzahl für Studenten, die gar keine Zeit investiert haben, signifikant von $0$ verschieden ist. Hierzu möchten Sie einen $t$-Test durchführen.
+Nun interessiert es Sie, ob die erwartete Punktzahl für Studenten, die gar keine Zeit investiert haben, signifikant von $0$ verschieden ist. Daher möchten Sie einen $t$-Test durchführen.
+
+Hinweis: Es ist
+
+$$ t \sim \tau_{n-k}. $$
 
 *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
@@ -66,10 +70,10 @@ Nun interessiert es Sie, ob die erwartete Punktzahl für Studenten, die gar kein
 ```{r}
 set.seed(2)
 n <- 105
-x <- runif(n,0,24)
-y <- rep(NA,n)
+Z <- runif(n,0,24)
+XP <- rep(NA,n)
 for(i in 1:n) {
-  y[i] <- 100 + 60 * x[i] + rnorm(1, sd=20*x[i])
+  XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
 plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
@@ -84,12 +88,21 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=sample_code
 ```{r}
-# Berechnen Sie den Schätzer, speichern sie die Ergebnisse in beta0 und beta1.
+# Berechnen Sie die t-Statistik
+
+
+# Überprüfen Sie, ob die t-Statistik Element des Ablehnbereichs ist
+
 
 ```
 
 ***=solution
 ```{r}
+# Berechnen Sie die t-Statistik
+tstat <- coefficients(summary(lm(XP ~ Z)))[1,3]
+
+# Überprüfen Sie, ob die t-Statistik Element des Ablehnbereichs ist
+abs(tstat) >= qt(0.975, df = 103)
 ```
 
 *** =sct
