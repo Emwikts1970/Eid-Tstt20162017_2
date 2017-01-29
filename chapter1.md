@@ -209,6 +209,15 @@ dim(hcm)
 
 ```
 
+***=sct
+```{r}
+test_function("library", args = "package")
+
+test_object("hcm")
+
+test_function("dim", args = "x")
+```
+
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:1e07ad71cf
 ## Heteroskedastie II
