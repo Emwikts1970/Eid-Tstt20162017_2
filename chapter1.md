@@ -112,23 +112,22 @@ abs(tstat) >= qt(0.975, df = 103)
 test_predefined_objects("XP")
 test_predefined_objects("Z")
 test_object("tstat")
-test_correct({
+test_or(
     test_student_typed("abs(tstat) >= qt(0.975, df = 103)")
-    },{
+    ,
     test_student_typed("abs(tstat) > qt(0.975, df = 103)")
-    },{
+    ,
     test_student_typed("abs(tstat) <= qt(0.975, df = 103)")
-    },{
+    ,
     test_student_typed("abs(tstat) < qt(0.975, df = 103)")
-    },{
+    ,
     test_student_typed("qt(0.975, df = 103) >= abs(tstat)")
-    },{
+    ,
     test_student_typed("qt(0.975, df = 103) > abs(tstat)")
-    },{
+    ,
     test_student_typed("qt(0.975, df = 103) <= abs(tstat)")
-    },{
+    ,
     test_student_typed("qt(0.975, df = 103) < abs(tstat)") 
-    }
     )
 ```
 
