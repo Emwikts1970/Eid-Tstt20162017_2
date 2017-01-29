@@ -384,7 +384,7 @@ $$ \overset{\sim}{\beta}\_w = \sum\_{i=1}^n w\_i Y\_i \ \ \text{wobei} \ \ w_i =
 Weiterhin gelte $\epsilon = 0.8$.
 
 *** =instructions
-Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br> <b>Hinweis</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`.
+Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br> <b>Hinweise</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`. mit den Funktionen `floor` und `ceiling` können Sie ganzzahlig ab- bzw. aufrunden.
 
 
 ***=sample_code
