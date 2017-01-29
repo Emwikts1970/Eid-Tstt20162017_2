@@ -111,7 +111,7 @@ abs(tstat) >= qt(0.975, df = 103)
 ```{r}
 test_predefined_objects("XP")
 test_predefined_objects("Z")
-test_object(tstat)
+test_object("tstat")
 test_correct({
     test_student_typed("abs(tstat) >= qt(0.975, df = 103)")
     },{
