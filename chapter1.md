@@ -82,8 +82,8 @@ plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), x
 
 ***=instructions
 
-- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Speichern Sie das Ergebnis in `tstat`
-- Überprüfen Sie anhand logischer Operatoren, ob der Absolutbetrag von `tstat` den kritischen Wert zum $5\%$-Niveau überschreitet. 
+- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Runden Sie den Wert auf *vier* Nachkommastellen und speichern Sie das Ergebnis in `tstat`
+- Überprüfen Sie anhand logischer Operatoren, ob `tstat` im Ablehnbereicht eines Tests zum $5\%$-Niveau liegt. 
 
 ***=hint
 
@@ -115,7 +115,19 @@ test_object("tstat")
 test_correct({
     test_student_typed("abs(tstat) >= qt(0.975, df = 103)")
     },{
-    test_student_typed("qt(0.975, df = 103) =< abs(tstat)")
+    test_student_typed("abs(tstat) > qt(0.975, df = 103)")
+    },{
+    test_student_typed("abs(tstat) <= qt(0.975, df = 103)")
+    },{
+    test_student_typed("abs(tstat) < qt(0.975, df = 103)")
+    },{
+    test_student_typed("qt(0.975, df = 103) >= abs(tstat)")
+    },{
+    test_student_typed("qt(0.975, df = 103) > abs(tstat)")
+    },{
+    test_student_typed("qt(0.975, df = 103) <= abs(tstat)")
+    },{
+    test_student_typed("qt(0.975, df = 103) < abs(tstat)") 
     }
     )
 ```
