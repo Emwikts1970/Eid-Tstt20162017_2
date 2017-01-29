@@ -440,7 +440,7 @@ Die Simulation soll die folgenden Schritte umfassen:
 
 ```{r}
 OLS <- function(Y) {
-    beta0 <- 1/length(Y)*sum(Y)+exp(mean(y))
+    beta0 <- 1/length(Y)*sum(Y)
     return(beta0)
 } 
 
