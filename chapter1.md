@@ -529,8 +529,8 @@ weighted.w <- rep(NA,5000)
 custom_seed(1234)
 for (i in 1:5000) {
   y <- rnorm(100)
-  ols[i] <- mean(y)
-  weighted.w[i] <- crossprod(w,y)
+  ols[i] <- OLS(y)
+  weighted.w[i] <- beta.w(y)
 }
 ```
 
