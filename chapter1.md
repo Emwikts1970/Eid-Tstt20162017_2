@@ -539,7 +539,7 @@ for (i in 1:5000) {
 ```{r}
 # Histogramme plotten
 library(scales)
-hist(x = ???, freq = F, col = ???)
+hist(x = ???, freq = F, col = ???, xlab = "OLS/Weighted")
 hist(x = weighted.w, freq = F, add = ???, col = alpha("red",0.6))
 
 # Streuungsmaße vergleichen
