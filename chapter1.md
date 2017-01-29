@@ -222,11 +222,31 @@ test_function("dim", args = "x")
 --- type:NormalExercise lang:r xp:100 skills:1 key:1e07ad71cf
 ## Heteroskedastie II
 
+*Die Vektoren `XP` und `Z` sowie die geschätzte Varianz-Kovarianz-Matrix `hcm` sind in Ihrer Arbeitsumgebung verfügbar.*
+
+*** =pre_exercise_code
+```{r}
+library(sandwich)
+library(lmtest)
+
+set.seed(2)
+n <- 105
+Z <- runif(n,0,24)
+XP <- rep(NA,n)
+for(i in 1:n) {
+  XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
+}
+
+mod <- lm(XP ~ Z)
+hcm <- vcovHC(mod, type = "HC0")
+rm(mod)
+```
+
 ***=instructions
 
 - Laden Sie nun zusätzlich das Paket `lmtest`
 - Führen Sie erneut einen Signifikanztest für $\beta\_0$ durch. Benutzen Sie dafür die Funktion `coeftest` in Kombination mit dem robusten Schätzer für die Varianz-Kovarianz-Matrix der geschätzten Koeffizienten aus der letzten Aufgabe 
-- Zeigen Sie mit logischen Operatoren, dass die robuste $t$-Statistik im Ablehnbereich für einen Test zum $5\%$-Niveau liegt und sich damit eine andere Schlussfolgerung als bei herkömmlichen Standardfehlern ergibt. 
+- Speichern Sie die robuste $t$-Statistik in `tstat` und zeigen Sie mit logischen Operatoren, dass diese im Ablehnbereich für einen Test zum $5\%$-Niveau liegt und sich damit eine andere Schlussfolgerung als bei herkömmlichen Standardfehlern ergibt. 
 
 ***=sample_code
 ```{r}
@@ -241,6 +261,29 @@ test_function("dim", args = "x")
 
 ```
 
+***=solution
+```{r}
+# Laden Sie das Paket lmtest
+library(lmtest)
+
+# Benutzen Sie die Funktion coeftest und testen Sie erneut
+mod <- lm(XP ~ Z)
+tstat <- coeftest(mod, vcov.=hcm)[1,3]
+
+# Zeigen Sie, dass die robuste t-Statistik im Ablehnbereich liegt
+abs(tstat) >= qt(0.975, df = 103)
+```
+
+***=sct
+
+```{r}
+test_function("library")
+
+test_function("coeftest")
+
+test_object("tstat")
+
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer?
 
