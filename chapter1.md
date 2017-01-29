@@ -473,6 +473,11 @@ for (i in 1:???) {
 *** =solution
 
 ```{r}
+# Initialisieren Sie die Vektoren ols und weighted.w
+ols <- rep(NA,5000)
+weighted.w <- rep(NA,5000)
+
+# Simulation
 for (i in 1:5000) {
   y <- rnorm(100)
   ols[i] <- OLS(y)
@@ -483,8 +488,8 @@ for (i in 1:5000) {
 ***=sct
 
 ```{r}
-test_object("ols")
-test_object("weighted.w")
+test_object("ols", eq_condition = "equal")
+test_object("weighted.w", eq_condition = "equal")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:86a8ca6d26
