@@ -412,7 +412,7 @@ beta.w <- function(Y) {
 ```{r}
 test_function_definition("beta.w",
                          function_test = {
-                           test_expression_result("beta.w(seq(1,10,0.1))", incorrect_msg = "Die Funktion ist falsch definiert. Sie berechnet nicht Schaetzer $\overset{\sim}{\beta}\_w$.")
+                           test_expression_result("beta.w(seq(1,10,0.1))", incorrect_msg = "Die Funktion ist falsch definiert. Sie berechnet den benötigten Schaetzer nicht.")
                          },
                          undefined_msg = "Sie haben die Funktion `beta.w` nicht definiert"
                          )
