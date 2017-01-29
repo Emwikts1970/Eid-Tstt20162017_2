@@ -64,7 +64,7 @@ Hinweis: Es ist
 
 $$ t \sim \tau_{n-k} $$
 
-wobei $\tau_{n-k}$ die $t$-Verteilung mit $n-k$ Freiheitsgraden ist.
+wobei $\tau_{n-k}$ die $t$-Verteilung mit $n-k$ Freiheitsgraden ist..
 
 *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
@@ -109,6 +109,7 @@ abs(tstat) >= qt(0.975, df = 103)
 
 *** =sct
 ```{r}
+test_object(tstat)
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e319267621
