@@ -100,7 +100,11 @@ plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), x
 
 ***=solution
 ```{r}
+# Berechnen Sie die t-Statistik
+tstat <- coefficients(summary(lm(XP ~ Z)))[1,3]
 
+# Überprüfen Sie, ob die t-Statistik Element des Ablehnbereichs ist
+abs(tstat) >= qt(0.975, df = 103)
 ```
 
 *** =sct
