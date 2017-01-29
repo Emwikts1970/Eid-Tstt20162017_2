@@ -426,7 +426,7 @@ Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
 <br>
 Sind die klassischen OLS-Annahmen erfüllt und die Fehlerterme homoskedastisch, so ist der OLS-Schätzer am effizientesten in der Klasse der linearen und bedingt unverzerrten Schätzer, d.h. es gibt keinen anderen qualifizierten Schätzer mit einer geringeren Varianz.
 
-Sie sollen dies Anhand einer Simulationsstudie für die zuvor erstellten Schätzfunktionen `OLS` und `betaw` verdeutlichen:
+Sie sollen dies Anhand einer Simulationsstudie für die zuvor erstellten Schätzfunktionen `OLS` und `beta.w` verdeutlichen:
 
 Die Simulation soll die folgenden Schritte umfassen:
 
@@ -434,7 +434,22 @@ Die Simulation soll die folgenden Schritte umfassen:
 2. Berechnen Sie die Schätzer mit den Funktionen `OLS` und `beta.w`. Speichern Sie die Resultate jeweils an der $i$-ten Stelle der Vektoren `ols` und `weighted.w` ab.
 3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,5000$
 
-*Die Funktionen `OLS` und `betaw` sind in ihrer Arbeitsumgebung verfügbar!*
+*Die Funktionen `OLS` und `beta.w` sind in ihrer Arbeitsumgebung verfügbar!*
+
+***=pre_exercise_code
+
+```{r}
+OLS <- function(Y) {
+    beta0 <- 1/length(Y)*sum(Y)+exp(mean(y))
+    return(beta0)
+} 
+beta.w <- function(Y) {
+    n <- length(Y)
+    w <- c(rep((1+0.8)/n,floor(n/2)), rep(1/n,ceiling(n/2)))
+    return(crossprod(w,Y)) # Skalarprodukt von w und Y
+}
+```
+
 
 ***=instructions
 - Initialisieren Sie zunächst die Vektoren `ols` und `weighted.w`, sodass beide Vektoren $5000$ Einträge `NA` aufweisen.
@@ -442,7 +457,7 @@ Die Simulation soll die folgenden Schritte umfassen:
 
 ***=sample_code
 ```{r}
-custom_seed(1234) # nicht von Relevanz
+custom_seed(1234) # nicht von Relevanz für Sie
 
 # Initialisieren Sie die Vektoren ols und weighted.w
 
@@ -455,8 +470,21 @@ for (i in 1:???) {
 }
 ```
 
-*** =pre_exercise_code
+*** =solution
+
 ```{r}
+for (i in 1:5000) {
+  y <- rnorm(100)
+  ols[i] <- OLS(y)
+  weighted.w[i] <- beta.w(y)
+}
+```
+
+***=sct
+
+```{r}
+test_object("ols")
+test_object("weighted.w")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:86a8ca6d26
