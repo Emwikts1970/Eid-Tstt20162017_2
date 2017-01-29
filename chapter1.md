@@ -353,8 +353,6 @@ OLS <- function(Y) {
 } 
 ```
 
-test_function_
-
 *** =sct
 ```{r}
 test_function_definition("OLS",
@@ -399,6 +397,25 @@ beta.w <- function(Y) {
     return(crossprod(w,y)) # Skalarprodukt von w und Y
 }
 
+```
+
+***=solution
+```{r}
+beta.w <- function(Y) {
+    n <- length(Y)
+    w <- c(rep((1+epsilon)/n,n/2),rep(1/n,n/2))
+    return(crossprod(w,y)) # Skalarprodukt von w und Y
+}
+```
+
+*** =sct
+```{r}
+test_function_definition("beta.w",
+                         function_test = {
+                           test_expression_result("beta.w(seq(1,10,0.1))", incorrect_msg = "Die Funktion ist falsch definiert. Sie berechnet nicht Schätzer $\overset{\sim}{\beta}\_w$.")
+                         },
+                         undefined_msg = "Sie haben die Funktion `beta.w` nicht definiert"
+                         )
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:38065ff1c6
