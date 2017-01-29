@@ -443,6 +443,7 @@ OLS <- function(Y) {
     beta0 <- 1/length(Y)*sum(Y)+exp(mean(y))
     return(beta0)
 } 
+
 beta.w <- function(Y) {
     n <- length(Y)
     w <- c(rep((1+0.8)/n,floor(n/2)), rep(1/n,ceiling(n/2)))
