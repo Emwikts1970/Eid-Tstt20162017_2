@@ -173,16 +173,41 @@ XP <- rep(NA,n)
 for(i in 1:n) {
   XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
-plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
+plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
 
 ***=instructions
 
 - Laden Sie das Paket `sandwich`.
-- Führen Sie zunächst eine heteroskedastie-robuste Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten durch. Speichern Sie die Matrix in `hcm`. <b>Hinweis</b> Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
+- Führen Sie zunächst eine Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten mit dem Schätzer von White durch. Speichern Sie die Matrix in `hcm`. <b>Hinweis</b> Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen, s. `?vcovHC`.
 - Vergewissern Sie sich, dass es sich bei `hcm` um eine symmetrische $2\times 2$-Matrix handelt.
 
+***=sample_code
+```{r}
+# Laden Sie das Paket sandwich
 
+
+# Schätzen sie die Varianz-Kovarianz-Matrix
+
+
+# Prüfen Sie die Dimensionen von hcm
+
+
+```
+
+***=solution
+```{r}
+# Laden Sie das Paket sandwich
+library(sandwich)
+
+# Schätzen sie die Varianz-Kovarianz-Matrix
+mod <- lm(XP ~ Z)
+hcm <- vcovHC(mod, type = "HC0")
+
+# Prüfen Sie die Dimensionen von hcm
+
+
+```
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:1e07ad71cf
