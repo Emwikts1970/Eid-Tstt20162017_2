@@ -5,7 +5,7 @@ description : Dieses Testat besteht aus einem Kapitel mit insgesamt 11 Aufgaben.
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Testatpunkte
 
-Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen Sie arbeiten als unterbezahlter Hiwi am Lehrstuhl für Ökonometrie und Ihnen liegen Beobachtungen zur erreichten XP (`XP`) sowie investierter Zeit (`Z`) vor. In ihrer Schusseligkeit haben Sie einen zufälligen Teil der Daten unwiederbringlich gelöscht und müssen nun Regressionsanalyse & Inferenzstatistik anhand einer Stichprobe betreiben. Professor Dr. Prank pocht auf signifikante Ergebnisse!
+Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen Sie arbeiten als Hiwi am Lehrstuhl für Ökonometrie und Ihnen liegen Beobachtungen zur erreichten XP (`XP`) sowie investierter Zeit (`Z`) vor. In ihrer Schusseligkeit haben Sie einen zufälligen Teil der Daten unwiederbringlich gelöscht und wollnen nun Regressionsanalyse & Inferenzstatistik anhand einer Stichprobe betreiben. Professor Dr. Prank pocht auf signifikante Ergebnisse, egal wie!
 <br>
 Der beobachtete Zusammenhang wird im Plot-Panel dargestellt.
 
@@ -17,7 +17,7 @@ $$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i  $$
 
 ***=instructions
 
-Berechnen Sie die OLS-Schätzer für $\beta\_0$ und $\beta\_1$. Speichern Sie die Ergebnisse in `beta0` und `beta1`.
+Berechnen Sie die OLS-Schätzer für $\beta\_0$ und $\beta\_1$. Runden Sie die Werte auf *vier* Nachkommastellen. Speichern Sie die Ergebnisse in `beta0` und `beta1`.
 
 *** =pre_exercise_code
 ```{r}
@@ -39,15 +39,17 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 ***=solution
 ```{r}
-beta <- 2
+beta0 <- round(lm(y ~ x)$coefficients[1],4)
+beta1 <- round(lm(y ~ x)$coefficients[2],4)
 ```
 
 *** =sct
 ```{r}
-test_object("beta")
+test_object("beta0")
+test_object("beta1")
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8081bbca4a
+--- type:NormalExercise lang:r xp:100 skills:1 key:5826368309
 ## Übung macht den Meister? 
 
 Sie befassen sich weiterhin mit dem Modell
@@ -94,7 +96,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:6637c6115f
+--- type:NormalExercise lang:r xp:100 skills:1 key:e319267621
 ## Heteroskedastie I
 
 In der letzten Aufgabe sind Sie zu dem Schluss gekommen, dass der Koeffizient $\beta\_0$ im Regressionsmodell
@@ -133,7 +135,7 @@ plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xl
 
 Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen.
 
---- type:NormalExercise lang:r xp:100 skills:1 key:fc73c0e68d
+--- type:NormalExercise lang:r xp:100 skills:1 key:1e07ad71cf
 ## Heteroskedastie II
 
 ***=instructions
@@ -191,7 +193,7 @@ OLS <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:b853dc2528
+--- type:NormalExercise lang:r xp:100 skills:1 key:e95912639a
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -227,7 +229,7 @@ beta.w <- function(Y) {
 
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:f05bb0f951
+--- type:NormalExercise lang:r xp:100 skills:1 key:38065ff1c6
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
@@ -268,7 +270,7 @@ for (i in 1:???) {
 ```{r}
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:45ee3ad9fa
+--- type:NormalExercise lang:r xp:100 skills:1 key:86a8ca6d26
 ## Das Gauss-Markov-Theorem II
 
 Betrachten Sie nun Ihre Ergebnisse aus der letzten Aufgabe genauer. 
