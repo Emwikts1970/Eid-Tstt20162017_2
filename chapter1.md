@@ -566,7 +566,13 @@ sd(ols) > sd(weighted.w)
 test_function("hist", index = 1, args = "x")
 test_function("hist", index = 2, args = c("x","add"))
 
-test_student_typed("sd(ols) > sd(weighted.w)")
+test_or(
+    {
+    test_student_typed("sd(ols) > sd(weighted.w)")
+    },{
+    test_student_typed("sd(ols) < sd(weighted.w)")
+    }
+)
 ```
 
 
