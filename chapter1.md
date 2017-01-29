@@ -432,7 +432,7 @@ Die Simulation soll die folgenden Schritte umfassen:
 
 1. Erstellen Sie einen Vektor `Y` mit $100$ Zufallszahlen aus einer $\mathcal{N}(0,1)$-Verteilung.
 2. Berechnen Sie die Schätzer mit den Funktionen `OLS` und `beta.w`. Speichern Sie die Resultate jeweils an der $i$-ten Stelle der Vektoren `ols` und `weighted.w` ab.
-3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,5000$
+3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,5000$.
 
 *Die Funktionen `OLS` und `beta.w` sind in ihrer Arbeitsumgebung verfügbar!*
 
