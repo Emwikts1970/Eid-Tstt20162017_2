@@ -512,9 +512,16 @@ $$ \text{Var}(\widehat{\beta}\_{OLS}) < \text{Var}(\overset{\sim}{\beta}\_{w}). 
 ***=pre_exercise_code
 
 ```{r}
-n <- 100
-epsilon <- 0.8
-w <- c(rep((1+epsilon)/n,n/2),rep(1/n,n/2))
+OLS <- function(Y) {
+    beta0 <- 1/length(Y)*sum(Y)
+    return(beta0)
+} 
+
+beta.w <- function(Y) {
+    n <- length(Y)
+    w <- c(rep((1+0.8)/n,floor(n/2)), rep(1/n,ceiling(n/2)))
+    return(crossprod(w,Y)) # Skalarprodukt von w und Y
+}
 
 ols <- rep(NA,5000)
 weighted.w <- rep(NA,5000)
