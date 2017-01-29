@@ -552,7 +552,7 @@ hist(x = weighted.w, freq = F, add = ???, col = alpha("red",0.6))
 ```{r}
 # Histogramme plotten
 library(scales)
-hist(x = ols, freq = F, col = green)
+hist(x = ols, freq = F, col = "green")
 hist(x = weighted.w, freq = F, add = T, col = alpha("red",0.6))
 
 # Streuungsmaße vergleichen
