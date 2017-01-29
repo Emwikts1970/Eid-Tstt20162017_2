@@ -340,6 +340,15 @@ Passen Sie den Code der Funktion `OLS` im `script.R` an, sodass der OLS-Schätze
 
 ```
 
+***=solution
+
+```{r}
+OLS <- function(Y) {
+    beta0 <- 1/length(Y)*sum(Y)
+    return(beta0)
+} 
+```
+
 ***=sample_code
 
 ```{r}
