@@ -568,9 +568,9 @@ test_function("hist", index = 2, args = c("x","add"))
 
 test_or(
     {
-    test_student_typed("sd(ols) > sd(weighted.w)")
+    test_student_typed("sd(ols) > sd(weighted.w)", not_typed_msg = "Zeigen Sie, dass die Streuung von OLS geringer ist.")
     },{
-    test_student_typed("sd(ols) < sd(weighted.w)")
+    test_student_typed("sd(ols) < sd(weighted.w)", not_typed_msg = "Zeigen Sie, dass die Streuung von OLS geringer ist.")
     }
 )
 ```
