@@ -353,7 +353,7 @@ OLS <- function(Y) {
 ```{r}
 fundef <- ex() %>% check_fun_def("OLS")
 fundef %>% check_arguments()
-fundef %>% check_call(seq(1,123,0.3) %>% check_result()
+fundef %>% check_call(seq(1,123,0.3)) %>% check_result()
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e95912639a
