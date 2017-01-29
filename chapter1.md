@@ -28,7 +28,7 @@ y <- rep(NA,n)
 for(i in 1:n) {
   y[i] <- 100 + 60 * x[i] + rnorm(1, sd=20*x[i])
 }
-plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
+plot(x,y, pch=20, col="Steelblue", cex=0.7, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
 
 ***=sample_code
