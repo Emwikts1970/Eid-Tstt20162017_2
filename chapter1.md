@@ -348,7 +348,7 @@ OLS <- function(Y) {
 
 ```{r}
 OLS <- function(Y) {
-    beta0 <- 1/length(Y)*sum(Y)+rlnorm(sd(Y))
+    beta0 <- 1/length(Y)*sum(Y)+exp(mean(y))
     return(beta0)
 } 
 ```
