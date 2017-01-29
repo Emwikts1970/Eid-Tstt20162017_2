@@ -355,9 +355,11 @@ OLS <- function(Y) {
 
 *** =sct
 ```{r}
-fundef <- ex() %>% check_fun_def("OLS")
-fundef %>% check_arguments()
-fundef %>% check_call("seq(1,123,0.3)") %>% check_result()
+test_function_definition("OLS",
+                         function_test = {
+                           test_expression_result("OLS(seq(1,10,0.1))")
+                         }
+                         )
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e95912639a
