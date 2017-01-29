@@ -526,7 +526,9 @@ beta.w <- function(Y) {
 ols <- rep(NA,5000)
 weighted.w <- rep(NA,5000)
 
-custom_seed(1234)
+
+
+set.seed(1234)
 for (i in 1:5000) {
   y <- rnorm(100)
   ols[i] <- OLS(y)
