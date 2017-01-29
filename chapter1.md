@@ -284,37 +284,37 @@ test_function("coeftest")
 test_object("tstat")
 
 test_or(
-    test_student_typed("abs(tstat) >= qt(0.975, df = 103)")
+    test_student_typed("abs(tstat) >= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("abs(tstat) > qt(0.975, df = 103)")
+    test_student_typed("abs(tstat) > qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("abs(tstat) <= qt(0.975, df = 103)")
+    test_student_typed("abs(tstat) <= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("abs(tstat) < qt(0.975, df = 103)")
+    test_student_typed("abs(tstat) < qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) >= abs(tstat)")
+    test_student_typed("qt(0.975, df = 103) >= abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) > abs(tstat)")
+    test_student_typed("qt(0.975, df = 103) > abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) <= abs(tstat)")
+    test_student_typed("qt(0.975, df = 103) <= abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) < abs(tstat)")
+    test_student_typed("qt(0.975, df = 103) < abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("tstat >= qt(0.975, df = 103)")
+    test_student_typed("tstat >= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("tstat > qt(0.975, df = 103)")
+    test_student_typed("tstat > qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("tstat <= qt(0.975, df = 103)")
+    test_student_typed("tstat <= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("tstat < qt(0.975, df = 103)")
+    test_student_typed("tstat < qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) >= tstat")
+    test_student_typed("qt(0.975, df = 103) >= tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) > tstat")
+    test_student_typed("qt(0.975, df = 103) > tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) <= tstat")
+    test_student_typed("qt(0.975, df = 103) <= tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
     ,
-    test_student_typed("qt(0.975, df = 103) < tstat") 
+    test_student_typed("qt(0.975, df = 103) < tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil") 
     )
 
 ```
