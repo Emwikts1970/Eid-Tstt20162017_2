@@ -283,6 +283,40 @@ test_function("coeftest")
 
 test_object("tstat")
 
+test_or(
+    test_student_typed("abs(tstat) >= qt(0.975, df = 103)")
+    ,
+    test_student_typed("abs(tstat) > qt(0.975, df = 103)")
+    ,
+    test_student_typed("abs(tstat) <= qt(0.975, df = 103)")
+    ,
+    test_student_typed("abs(tstat) < qt(0.975, df = 103)")
+    ,
+    test_student_typed("qt(0.975, df = 103) >= abs(tstat)")
+    ,
+    test_student_typed("qt(0.975, df = 103) > abs(tstat)")
+    ,
+    test_student_typed("qt(0.975, df = 103) <= abs(tstat)")
+    ,
+    test_student_typed("qt(0.975, df = 103) < abs(tstat)")
+    ,
+    test_student_typed("tstat >= qt(0.975, df = 103)")
+    ,
+    test_student_typed("tstat > qt(0.975, df = 103)")
+    ,
+    test_student_typed("tstat <= qt(0.975, df = 103)")
+    ,
+    test_student_typed("tstat < qt(0.975, df = 103)")
+    ,
+    test_student_typed("qt(0.975, df = 103) >= tstat")
+    ,
+    test_student_typed("qt(0.975, df = 103) > tstat")
+    ,
+    test_student_typed("qt(0.975, df = 103) <= tstat")
+    ,
+    test_student_typed("qt(0.975, df = 103) < tstat") 
+    )
+
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
 ## Ein Linearer und Unverzerrter Schätzer?
