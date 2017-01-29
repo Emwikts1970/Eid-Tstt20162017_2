@@ -489,6 +489,7 @@ for (i in 1:5000) {
 ***=sct
 
 ```{r}
+test_student_typed("for (i in 1:5000)", not_typed_msg = "Benutzen Sie die vorgeschlagene for-Schleife!")
 test_object("ols", eq_condition = "equal")
 test_object("weighted.w", eq_condition = "equal")
 ```
