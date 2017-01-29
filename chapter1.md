@@ -547,5 +547,29 @@ hist(x = weighted.w, freq = F, add = ???, col = alpha("red",0.6))
 
 ```
 
+***=solution
+
+```{r}
+# Histogramme plotten
+library(scales)
+hist(x = ols, freq = F, col = green)
+hist(x = weighted.w, freq = F, add = T, col = alpha("red",0.6))
+
+# Streuungsmaße vergleichen
+sd(ols) > sd(weighted.w)
+
+```
+
+***=sct
+
+```{r}
+test_function("hist", index = 1, args = "x")
+test_function("hist", index = 2, args = c("x","add"))
+
+test_student_typed("sd(ols) > sd(weighted.w)")
+```
+
+
+
 
 
