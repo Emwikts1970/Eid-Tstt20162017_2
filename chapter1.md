@@ -353,11 +353,13 @@ OLS <- function(Y) {
 } 
 ```
 
+test_ex
+
 *** =sct
 ```{r}
 test_function_definition("OLS",
                          function_test = {
-                           test_expression_result("OLS(seq(1,10,0.1))")
+                           test_expression_result("OLS(seq(1,10,0.1))", incorrect_msg = "Die Funktion ist falsch definiert. Sie liefert nicht den passenden OLS-Schätzwert.")
                          }
                          )
 ```
