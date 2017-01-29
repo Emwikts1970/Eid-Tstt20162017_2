@@ -403,7 +403,7 @@ beta.w <- function(Y) {
 ```{r}
 beta.w <- function(Y) {
     n <- length(Y)
-    w <- c(rep((1+epsilon)/n,n/2),rep(1/n,n/2))
+    w <- c(rep((1+0.8)/n,n/2),rep(1/n,n/2))
     return(crossprod(w,y)) # Skalarprodukt von w und Y
 }
 ```
