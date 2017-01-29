@@ -107,6 +107,8 @@ tstat <- coefficients(summary(lm(XP ~ Z)))[1,3]
 abs(tstat) >= qt(0.975, df = 103)
 ```
 
+
+
 *** =sct
 ```{r}
 test_predefined_objects("XP")
@@ -127,7 +129,23 @@ test_or(
     ,
     test_student_typed("qt(0.975, df = 103) <= abs(tstat)")
     ,
-    test_student_typed("qt(0.975, df = 103) < abs(tstat)") 
+    test_student_typed("qt(0.975, df = 103) < abs(tstat)")
+    ,
+    test_student_typed("tstat >= qt(0.975, df = 103)")
+    ,
+    test_student_typed("tstat > qt(0.975, df = 103)")
+    ,
+    test_student_typed("tstat <= qt(0.975, df = 103)")
+    ,
+    test_student_typed("tstat < qt(0.975, df = 103)")
+    ,
+    test_student_typed("qt(0.975, df = 103) >= tstat")
+    ,
+    test_student_typed("qt(0.975, df = 103) > tstat")
+    ,
+    test_student_typed("qt(0.975, df = 103) <= tstat")
+    ,
+    test_student_typed("qt(0.975, df = 103) < tstat") 
     )
 ```
 
