@@ -77,7 +77,7 @@ XP <- rep(NA,n)
 for(i in 1:n) {
   XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
-plot(x,y, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
+plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
 ```
 
 ***=instructions
