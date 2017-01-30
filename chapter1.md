@@ -529,7 +529,6 @@ test_or({
         },{
         test_student_typed(">")
         })
-    )
     },{
     test_function("var", index = 1)
     test_function("var", index = 2)
@@ -538,8 +537,7 @@ test_or({
         },{
         test_student_typed(">")
         })
-    }
-)
+    })
 
 test_or(
     {
