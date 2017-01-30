@@ -544,7 +544,8 @@ test_or(
     test_output_contains("T", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
     },{
     test_output_contains("F", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
-})
+    }
+)
 
 ```
 
