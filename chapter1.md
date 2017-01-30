@@ -179,7 +179,7 @@ plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), x
 ***=instructions
 
 - Laden Sie das Paket `sandwich`.
-- Führen Sie zunächst eine Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten mit dem Schätzer von White durch. Speichern Sie die Matrix in `hcm`. <b>Hinweis</b> Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen, s. `?vcovHC`.
+- Führen Sie zunächst eine Schätzung der Varianz-Kovarianz-Matrix der Regressionskoeffizienten mit dem Schätzer von <b>White</b> durch. Speichern Sie die Matrix in `hcm`. <b>Hinweis</b> Für Heteroskedastie robuste Schätzung der Varianz-Kovarianz-Matrix von Regressionskoeffizienten können Sie die Funktion `vcovHC` benutzen, s. `?vcovHC`. Beachten Sie das Argument `type`.
 - Vergewissern Sie sich, dass es sich bei `hcm` um eine symmetrische $2\times 2$-Matrix handelt.
 
 ***=sample_code
