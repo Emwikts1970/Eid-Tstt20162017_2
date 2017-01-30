@@ -323,7 +323,7 @@ test_or(
 
 Angenommen Sie betrachten das Regressionsmodel
 
-$$ y\_i=\beta\_0 + \epsilon\_i \ \ , \ \ \epsilon\_i \sim (0,\sigma^2) \ \forall \ i=1,\dots,n $$
+$$ y\_i=\beta\_0 + \epsilon\_i \ \ , \ \ \epsilon\_i \sim (0,\sigma^2) \ \text{für} \ i=1,\dots,n $$
 
 d.h. eine Regression der Variable $\mathbf{Y} = (y\_1 \dots y\_n)$ auf einen konstanten Regressor $\mathbf{X} = (1 \dots 1)'.$
 
