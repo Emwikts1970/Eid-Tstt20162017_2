@@ -366,7 +366,7 @@ test_function_definition("OLS",
 
 Betrachten Sie weiterhin das Regressionsmodell
 
-$$ Y\_i=\beta\_0 + \epsilon\_i \ \ , \ \ \epsilon \sim (0,\sigma^2) \ , \ i=1,\dots,n. $$
+$$ y\_i=\beta\_0 + \epsilon\_i \ \ , \ \ \epsilon\_i \sim (0,\sigma^2) \ \text{für} \ i=1,\dots,n $$
 
 Aus der Vorlesung wissen Sie, dass ein Schätzer $\overset{\sim}{\beta}$ mit
 
