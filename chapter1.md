@@ -529,6 +529,7 @@ test_or(
         test_student_typed("<")
         },{
         test_student_typed(">")
+        }
     )
     test_output_contains("T")
     test_output_contains("F")
@@ -539,6 +540,7 @@ test_or(
         test_student_typed("<")
         },{
         test_student_typed(">")
+        }
     )
     test_output_contains("T")
     test_output_contains("F")
