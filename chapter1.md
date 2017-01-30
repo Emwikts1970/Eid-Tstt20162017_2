@@ -66,7 +66,7 @@ $$ t \sim \tau_{n-k} $$
 
 wobei $\tau_{n-k}$ die $t$-Verteilung mit $n-k$ Freiheitsgraden ist.
 
-*Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
+*Die Vektoren `XP` und `Z` sowie ein entsprechendes Regressionsmodell `mod` sind in Ihrer Arbeitsumgebung verfügbar.*
 
 *** =pre_exercise_code
 ```{r}
@@ -77,6 +77,7 @@ XP <- rep(NA,n)
 for(i in 1:n) {
   XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
+mod <- lm(XP ~ Z)
 ```
 
 ***=instructions
@@ -141,7 +142,7 @@ Betrachten Sie erneut den Plot: Eine weitere Auffälligkeit in den Daten ist, da
 <br>
 Sie sind besorgt über die Korrektheit der zuvor getroffenen Schlussfolgerung und wollen daher den Test mit heteroskedastie-robusten Standardfehlern wiederholen.
 
-*Die Vektoren `XP` und `Z` aus den letzten Aufgaben sind in Ihrer Arbeitsumgebung verfügbar.*
+*Die Vektoren `XP` und `Z` sowie ein entsprechendes Regressionsmodell `mod` sind in Ihrer Arbeitsumgebung verfügbar.*
 
 
 *** =pre_exercise_code
@@ -154,6 +155,7 @@ for(i in 1:n) {
   XP[i] <- 100 + 60 * Z[i] + rnorm(1, sd=20*Z[i])
 }
 plot(Z,XP, pch=20, col="Steelblue", cex=0.5, xlim = c(0,24), ylim = c(0,1500), xlab="Zeitaufwand", ylab="XP")
+mod <- lm(XP ~ Z)
 ```
 
 ***=instructions
@@ -202,7 +204,7 @@ test_function("dim", args = "x")
 --- type:NormalExercise lang:r xp:100 skills:1 key:1e07ad71cf
 ## Heteroskedastie II
 
-*Die Vektoren `XP` und `Z` sowie die geschätzte Varianz-Kovarianz-Matrix `hcm` sind in Ihrer Arbeitsumgebung verfügbar.*
+*Die Vektoren `XP` und `Z`, das Regressionsmodell `mod` sowie die geschätzte Varianz-Kovarianz-Matrix `hcm` sind in Ihrer Arbeitsumgebung verfügbar.*
 
 *** =pre_exercise_code
 ```{r}
@@ -219,7 +221,6 @@ for(i in 1:n) {
 
 mod <- lm(XP ~ Z)
 hcm <- vcovHC(mod, type = "HC0")
-rm(mod)
 ```
 
 ***=instructions
