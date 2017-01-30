@@ -284,8 +284,13 @@ test_function("coeftest")
 test_object("tstat")
 
 test_function("qt", args=c("p","df"))
-test_output_contains("T")
-test_output_contains("F")
+test_or(
+    {
+    test_output_contains("T")
+    },{
+    test_output_contains("F")
+})
+
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
