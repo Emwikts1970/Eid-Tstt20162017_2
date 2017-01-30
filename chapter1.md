@@ -376,7 +376,7 @@ als linear und bedingt unverzerrt bezeichnet wird.
 <br>
 In dieser Aufgabe sollen Sie eine Schätzfunktion für $\beta\_0$ erstellen, deren Gewichte $a\_i$ von denen der OLS-Lösung abweichen, genauer
 
-$$ \overset{\sim}{\beta}\_w = \sum\_{i=1}^n w\_i Y\_i \ \ \text{wobei} \ \ w_i = \begin{cases}
+$$ \overset{\sim}{\beta}\_w = \sum\_{i=1}^n w\_i y\_i \ \ \text{wobei} \ \ w_i = \begin{cases}
 \frac{1 + \epsilon}{n} & \text{wenn} \ n \leq \lfloor n/2 \rfloor \\\\ 1/n & \text{sonst.} \end{cases} $$
 
 Weiterhin gelte $\epsilon = 0.8$.
