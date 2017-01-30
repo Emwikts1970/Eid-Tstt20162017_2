@@ -33,7 +33,7 @@ plot(Z,XP, pch=20, col="Steelblue", cex=1, xlim = c(0,24), ylim = c(0,1500), xla
 
 ***=sample_code
 ```{r}
-# Berechnen Sie den Schätzer, speichern Sie das Ergebnis in beta0 und beta1
+# Berechnen Sie den Schätzer, speichern Sie die Ergebnisse in beta0 und beta1
 
 ```
 
