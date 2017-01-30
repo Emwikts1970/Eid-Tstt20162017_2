@@ -512,7 +512,7 @@ hist(x = weighted.w, freq = F, add = T, col = alpha("red",0.6))
 
 # Streuungsmaße vergleichen
 sd(ols) > sd(weighted.w)
-
+var(ols) > var(weighted.w)
 ```
 
 ***=sct
