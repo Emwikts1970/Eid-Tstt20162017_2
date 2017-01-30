@@ -5,7 +5,7 @@ description : Dieses Testat besteht aus einem Kapitel mit insgesamt 11 Aufgaben.
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Testatpunkte
 
-Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen Sie arbeiten als Hiwi am Lehrstuhl für Ökonometrie und Ihnen liegen Beobachtungen zur erreichten XP (`XP`) sowie investierter Zeit (`Z`) vor. In ihrer Schusseligkeit haben Sie einen zufälligen Teil der Daten unwiederbringlich gelöscht und wollnen nun Regressionsanalyse & Inferenzstatistik anhand einer Stichprobe betreiben. Professor Dr. Prank pocht auf signifikante Ergebnisse, egal wie!
+Erinnern Sie sich an das letzte Testat: Es waren 1500XP zu erreichen. Angenommen Sie arbeiten als Hiwi am Lehrstuhl für Ökonometrie und Ihnen liegen Beobachtungen zur erreichten XP (`XP`) sowie investierter Zeit (`Z`) vor. In ihrer Schusseligkeit haben Sie einen zufälligen Teil der Daten unwiederbringlich gelöscht und wollen nun Regressionsanalyse & Inferenzstatistik anhand einer Stichprobe betreiben. Professor Dr. Prank pocht auf signifikante Ergebnisse, egal wie!
 <br>
 Der beobachtete Zusammenhang wird im Plot-Panel dargestellt.
 
