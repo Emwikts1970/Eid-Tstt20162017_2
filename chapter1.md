@@ -82,7 +82,7 @@ for(i in 1:n) {
 ***=instructions
 
 - Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Benutzen sie bei Homoskedastie gültige Standardfehler. Runden Sie den Wert auf *vier* Nachkommastellen und speichern Sie das Ergebnis in `tstat`
-- Überprüfen Sie anhand logischer Operatoren, ob `tstat` im Ablehnbereicht eines Tests zum $5\%$-Niveau liegt. 
+- Überprüfen Sie mithilfe der Quantilsfunktion der $t$-Verteilung (`qt`) sowie logischer Operatoren, ob `tstat` im Ablehnbereicht eines Tests zum $5\%$-Niveau liegt. 
 
 ***=hint
 
@@ -93,7 +93,7 @@ for(i in 1:n) {
 
 
 # Überprüfen Sie, ob die t-Statistik Element des Ablehnbereichs ist
-
+abs(tstat) >= ???
 
 ```
 
@@ -283,39 +283,9 @@ test_function("coeftest")
 
 test_object("tstat")
 
-test_or(
-    test_student_typed("abs(tstat) >= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("abs(tstat) > qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("abs(tstat) <= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("abs(tstat) < qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) >= abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) > abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) <= abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) < abs(tstat)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("tstat >= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("tstat > qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("tstat <= qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("tstat < qt(0.975, df = 103)", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) >= tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) > tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) <= tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil")
-    ,
-    test_student_typed("qt(0.975, df = 103) < tstat", not_typed_msg = "Vergleichen Sie `tstat` mit dem $0.975$-Quantil") 
-    )
+test_function("qt", args=c("p","df"))
+test_output_contains("T")
+test_output_contains("F")
 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:726a6d460b
