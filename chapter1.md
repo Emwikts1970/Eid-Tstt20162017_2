@@ -111,41 +111,21 @@ abs(tstat) >= qt(0.975, df = 103)
 *** =sct
 ```{r}
 test_predefined_objects("XP")
+
 test_predefined_objects("Z")
+
 test_object("tstat")
+
+test_function("qt", args=c("p","df"), not_called_msg = "Sie haben die Quantilsfunktion der t-Verteilung nicht benutzt!")
 test_or(
-    test_student_typed("abs(tstat) >= qt(0.975, df = 103)")
-    ,
-    test_student_typed("abs(tstat) > qt(0.975, df = 103)")
-    ,
-    test_student_typed("abs(tstat) <= qt(0.975, df = 103)")
-    ,
-    test_student_typed("abs(tstat) < qt(0.975, df = 103)")
-    ,
-    test_student_typed("qt(0.975, df = 103) >= abs(tstat)")
-    ,
-    test_student_typed("qt(0.975, df = 103) > abs(tstat)")
-    ,
-    test_student_typed("qt(0.975, df = 103) <= abs(tstat)")
-    ,
-    test_student_typed("qt(0.975, df = 103) < abs(tstat)")
-    ,
-    test_student_typed("tstat >= qt(0.975, df = 103)")
-    ,
-    test_student_typed("tstat > qt(0.975, df = 103)")
-    ,
-    test_student_typed("tstat <= qt(0.975, df = 103)")
-    ,
-    test_student_typed("tstat < qt(0.975, df = 103)")
-    ,
-    test_student_typed("qt(0.975, df = 103) >= tstat")
-    ,
-    test_student_typed("qt(0.975, df = 103) > tstat")
-    ,
-    test_student_typed("qt(0.975, df = 103) <= tstat")
-    ,
-    test_student_typed("qt(0.975, df = 103) < tstat") 
-    )
+    {
+    test_output_contains("T", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
+    },{
+    test_output_contains("F", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
+})
+
+
+
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e319267621
@@ -283,12 +263,12 @@ test_function("coeftest")
 
 test_object("tstat")
 
-test_function("qt", args=c("p","df"))
+test_function("qt", args=c("p","df"), not_called_msg = "Sie haben die Quantilsfunktion der t-Verteilung nicht benutzt!")
 test_or(
     {
-    test_output_contains("T")
+    test_output_contains("T", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
     },{
-    test_output_contains("F")
+    test_output_contains("F", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
 })
 
 
@@ -480,7 +460,7 @@ $$ \text{Var}(\widehat{\beta}\_{OLS}) < \text{Var}(\overset{\sim}{\beta}\_{w}). 
 
 ***=instructions
 - Vervollständigen Sie die Befehle zum Erstellen der Histogramme.<br> <b>Hinweis</b>: Beide Histogramme sollen übereinander gezeichnet werden. Betrachten Sie `?hist` für weitere Details. Mit `col = alpha("red",0.6)` wird die Farbe Rot mit einem Deckungsgrad von $60\%$ gesetzt.
-- Berechnen Sie *ein* geeignetes Streuungsmaß für die simulierte Verteilung beider Punktschätzer und speichern Sie dieses jeweils in `sd.ols` und `sd.weighted.w`. Überprüfen Sie mit logischen Operatoren, ob Sie die obige Aussage des Gauss-Markov-Theorems bestätigen können.
+- Berechnen Sie *ein* geeignetes Streuungsmaß für die simulierte Verteilung beider Punktschätzer und überprüfen Sie mit logischen Operatoren, ob Sie die obige Aussage des Gauss-Markov-Theorems bestätigen können.
 
 ***=pre_exercise_code
 
@@ -543,11 +523,35 @@ test_function("hist", index = 2, args = c("x","add"))
 
 test_or(
     {
-    test_student_typed("sd(ols) > sd(weighted.w)", not_typed_msg = "Zeigen Sie, dass die Streuung von OLS geringer ist.")
+    test_function("sd", index = 1)
+    test_function("sd", index = 2)
+    test_or({
+        test_student_typed("<")
+        },{
+        test_student_typed(">")
+    )
+    test_output_contains("T")
+    test_output_contains("F")
     },{
-    test_student_typed("sd(ols) < sd(weighted.w)", not_typed_msg = "Zeigen Sie, dass die Streuung von OLS geringer ist.")
+    test_function("var", index = 1)
+    test_function("var", index = 2)
+    test_or({
+        test_student_typed("<")
+        },{
+        test_student_typed(">")
+    )
+    test_output_contains("T")
+    test_output_contains("F")
     }
 )
+
+test_or(
+    {
+    test_output_contains("T", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
+    },{
+    test_output_contains("F", incorrect_msg = "Sie haben keinen Vergleich mit logischen Operatoren durchgeführt!")
+})
+
 ```
 
 
