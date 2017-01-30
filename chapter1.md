@@ -521,18 +521,15 @@ var(ols) > var(weighted.w)
 test_function("hist", index = 1, args = "x")
 test_function("hist", index = 2, args = c("x","add"))
 
-test_or(
-    {
+test_or({
     test_function("sd", index = 1)
     test_function("sd", index = 2)
     test_or({
         test_student_typed("<")
         },{
         test_student_typed(">")
-        }
+        })
     )
-    test_output_contains("T")
-    test_output_contains("F")
     },{
     test_function("var", index = 1)
     test_function("var", index = 2)
@@ -540,10 +537,7 @@ test_or(
         test_student_typed("<")
         },{
         test_student_typed(">")
-        }
-    )
-    test_output_contains("T")
-    test_output_contains("F")
+        })
     }
 )
 
