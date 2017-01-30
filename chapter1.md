@@ -81,7 +81,7 @@ for(i in 1:n) {
 
 ***=instructions
 
-- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Runden Sie den Wert auf *vier* Nachkommastellen und speichern Sie das Ergebnis in `tstat`
+- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Benutzen sie bei Homoskedastie gültige Standardfehler. Runden Sie den Wert auf *vier* Nachkommastellen und speichern Sie das Ergebnis in `tstat`
 - Überprüfen Sie anhand logischer Operatoren, ob `tstat` im Ablehnbereicht eines Tests zum $5\%$-Niveau liegt. 
 
 ***=hint
