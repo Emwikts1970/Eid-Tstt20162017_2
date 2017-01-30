@@ -352,12 +352,12 @@ als linear und bedingt unverzerrt bezeichnet wird.
 In dieser Aufgabe sollen Sie eine Schätzfunktion für $\beta\_0$ erstellen, deren Gewichte $a\_i$ von denen der OLS-Lösung abweichen, genauer
 
 $$ \overset{\sim}{\beta}\_w = \sum\_{i=1}^n w\_i y\_i \ \ \text{wobei} \ \ w_i = \begin{cases}
-\frac{1 + \epsilon}{n} & \text{wenn} \ n \leq \lfloor n/2 \rfloor \\\\ 1/n & \text{sonst.} \end{cases} $$
+\frac{1 + \epsilon}{n} & \text{wenn} \ n \leq \text{int}(n/2) \\\\ 1/n & \text{sonst.} \end{cases} $$
 
 Weiterhin gelte $\epsilon = 0.8$.
 
 *** =instructions
-Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br> <b>Hinweise</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`. Mit `floor` und `ceiling` können Sie ganzzahlig ab- bzw. aufrunden.
+Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br> <b>Hinweise</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`. Mit `int` können Sie ganzzahlig ab- bzw. aufrunden.
 
 
 ***=sample_code
