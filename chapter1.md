@@ -412,7 +412,8 @@ beta.w <- function(Y) {
 
 ***=sample_code
 ```{r}
-set.seed(1)
+set.seed(1) # Für Sie nicht von Relevanz
+
 # Initialisieren Sie die Vektoren ols und weighted.w
 
 
@@ -427,7 +428,7 @@ for (i in 1:???) {
 *** =solution
 
 ```{r}
-set.seed(1)
+set.seed(1) # Für Sie nicht von Relevanz
 
 # Initialisieren Sie die Vektoren ols und weighted.w
 ols <- rep(NA,5000)
