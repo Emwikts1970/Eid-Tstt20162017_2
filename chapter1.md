@@ -428,6 +428,8 @@ for (i in 1:???) {
 *** =solution
 
 ```{r}
+custom_seed(1234) # nicht von Relevanz für Sie
+
 # Initialisieren Sie die Vektoren ols und weighted.w
 ols <- rep(NA,5000)
 weighted.w <- rep(NA,5000)
