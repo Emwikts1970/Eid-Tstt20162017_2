@@ -412,14 +412,13 @@ beta.w <- function(Y) {
 
 ***=sample_code
 ```{r}
-custom_seed(1234) # nicht von Relevanz für Sie
 
 # Initialisieren Sie die Vektoren ols und weighted.w
 
 
 # Simulation
 for (i in 1:???) {
-  Y <- ???
+  y <- ???
   ols[???] <- ???
   weighted.w[???] <- ???
 }
