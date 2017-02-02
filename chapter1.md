@@ -1,6 +1,6 @@
 ---
-  title       : Zur Aufgabe
-description : Dieses Testat besteht aus einem Kapitel mit insgesamt 11 Aufgaben. Die Aufgaben können unabhängig voneinander gelöst werden. Wir empfehlen Ihnen jedoch die Bearbeitung in der vorgegebenen Reihenfolge. <br> Beachten Sie, dass gelöste Aufgaben abhängig vom Schwierigkeitsgrad mit 100XP, 150XP oder 200XP belohnt werden. Lösungen, die bis 20 Uhr eingereicht sind werden akzeptiert.
+  title       :  Testataufgaben
+description : 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:c4b2c27865
 ## Testatpunkte
