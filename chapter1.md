@@ -17,7 +17,7 @@ $$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i  $$
 
 ***=hint
 
-Lineare Modelle können Sie mit `lm` schätzen. Die geschätzten Koeffizienten erhalten Sie z.B. mit `coefficients`.
+Lineare Modelle können Sie mit `lm` schätzen. Nutzten Sie `round` zum Runden. Die geschätzten Koeffizienten erhalten Sie z.B. mit `coefficients`.
 
 ***=instructions
 
@@ -359,9 +359,9 @@ Weiterhin gelte $\epsilon = 0.8$.
 
 $\lfloor x \rfloor$ ist die nächste ganze Zahl kleiner als x. 
 
-***hint
+***=hint
 
-Lineare Modelle schätzten Sie mit `lm`. Nutzen Sie `round` zum runden.
+
 
 *** =instructions
 Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br> <b>Hinweise</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`. Mit `floor` und `ceiling` können Sie ganzzahlig ab- bzw. aufrunden.
