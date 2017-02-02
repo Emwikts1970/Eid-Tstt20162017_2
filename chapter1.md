@@ -82,11 +82,12 @@ mod <- lm(XP ~ Z)
 
 ***=instructions
 
-- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Benutzen sie bei Homoskedastie gültige Standardfehler. Runden Sie den Wert auf *vier* Nachkommastellen und speichern Sie das Ergebnis in `tstat`
+- Berechnen Sie zunächst die passende $t$-Statistik zum Test $H\_0: \beta\_0=0 \ vs \ H\_1: \beta\_0\neq 0$. Benutzen sie *bei Homoskedastie gültige Standardfehler*. Runden Sie den Wert auf *vier* Nachkommastellen und speichern Sie das Ergebnis in `tstat`
 - Überprüfen Sie mithilfe der Quantilsfunktion der $t$-Verteilung (`qt`) sowie logischer Operatoren, ob `tstat` im Ablehnbereicht eines Tests zum $5\%$-Niveau liegt. 
 
 ***=hint
 
+Die Funktion `summary` liefert Ihnen statistische Informationen über ein Modellobjekt. Der Eintrag `coefficients` enthält eine Matrix mit geschätzten Koeffizienten sowie deren Standardfehler.
 
 ***=sample_code
 ```{r}
