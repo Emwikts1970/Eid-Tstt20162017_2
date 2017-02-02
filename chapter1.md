@@ -307,7 +307,7 @@ Passen Sie den Code der Funktion `OLS` im `script.R` an, sodass der OLS-Schätze
 
 ***=hint
 
-Im obigen Modell ist lautet der OLS-Schätzer $\overline{Y} = \widehat{\beta}\_0 = \frac{1}{n} \sum\_{i=1}^n y_i$.
+Im obigen Modell lautet der OLS-Schätzer $\overline{Y} = \widehat{\beta}\_0 = \frac{1}{n} \sum\_{i=1}^n y_i$.
 
 ***=solution
 
