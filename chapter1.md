@@ -15,6 +15,10 @@ $$ XP\_i = \beta\_0 + \beta\_1 \times Z\_i +  \epsilon\_i  $$
 
 *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
 
+***=hint
+
+Lineare Modelle können Sie mit `lm` schätzen. Die geschätzten Koeffizienten erhalten Sie z.B. mit `coefficients`.
+
 ***=instructions
 
 Berechnen Sie die OLS-Schätzer für $\beta\_0$ und $\beta\_1$. Runden Sie die Werte auf *vier* Nachkommastellen. Speichern Sie die Ergebnisse in `beta0` und `beta1`.
@@ -87,7 +91,8 @@ mod <- lm(XP ~ Z)
 
 ***=hint
 
-Die Funktion `summary` liefert Ihnen statistische Informationen über ein Modellobjekt. Der Eintrag `coefficients` enthält eine Matrix mit geschätzten Koeffizienten sowie deren Standardfehler.
+Die Funktion `summary` liefert Ihnen statistische Informationen über ein Modellobjekt. Der Eintrag `coefficients` enthält eine Matrix mit geschätzten Koeffizienten sowie deren Standardfehler.<br>
+Nützliche logische Operatoren sind `<` oder `>`. Die Länge eines Vektors bestimmen Sie mit `length`. Bedenken Sie: Es handelt sich um einen beidseitigen Test, d.h. sie suchen einen kritischen Wert $c\_{1-\frac{\alpha}{2}}$.
 
 ***=sample_code
 ```{r}
