@@ -502,6 +502,11 @@ $$ \text{Var}(\widehat{\beta}\_{OLS}) < \text{Var}(\overset{\sim}{\beta}\_{w}). 
 - Vervollständigen Sie die Befehle zum Erstellen der Histogramme.<br> <b>Hinweis</b>: Beide Histogramme sollen übereinander gezeichnet werden. Betrachten Sie `?hist` für weitere Details. Mit `col = alpha("red",0.6)` wird die Farbe Rot mit einem Deckungsgrad von $60\%$ gesetzt. 
 - Berechnen Sie *ein* geeignetes Streuungsmaß für die simulierte Verteilung beider Punktschätzer und überprüfen Sie mit logischen Operatoren, ob Sie die obige Aussage des Gauss-Markov-Theorems bestätigen können.
 
+***=hint
+
+- Der zweite Aufruf von `hist` zeichnet das Histogramm für den Vektor `weighted.w`. Für welche Daten soll das erste Histogramm gezeichnet werden?
+- Ein geeignetes Streuungsmaß ist die Varianz. Geeignete logische Operatoren sind `>` und `<`.
+
 ***=pre_exercise_code
 
 ```{r}
