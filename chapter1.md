@@ -305,6 +305,10 @@ In `script.R` finden Sie eine Funktion, welche den OLS-Schätzer für $\beta\_0$
 
 Passen Sie den Code der Funktion `OLS` im `script.R` an, sodass der OLS-Schätzer für $\beta\_0$ numerisch korrekt berechnet wird.
 
+***=hint
+
+Im obigen Modell ist lautet der OLS-Schätzer $\overline{Y} = \widehat{\beta}\_0 = \frac{1}{n} \sum\_{i=1}^n y_i$.
+
 ***=solution
 
 ```{r}
