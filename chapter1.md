@@ -337,7 +337,7 @@ test_function_definition("OLS",
                          )
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:e95912639a
+--- type:NormalExercise lang:r xp:200 skills:1 key:e95912639a
 ## Ein Linearer und Unverzerrter Schätzer! 
 
 Betrachten Sie weiterhin das Regressionsmodell
@@ -403,7 +403,7 @@ test_function_definition("beta.w",
                          )
 ```
 
---- type:NormalExercise lang:r xp:100 skills:1 key:38065ff1c6
+--- type:NormalExercise lang:r xp:200 skills:1 key:38065ff1c6
 ## Das Gauss-Markov-Theorem I
 
 Erinnern Sie sich an die Aussage des Gauss-Markov-Theorems:
