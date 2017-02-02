@@ -361,10 +361,12 @@ $\lfloor x \rfloor$ ist die nächste ganze Zahl kleiner als x.
 
 ***=hint
 
-Für $i > \lfloor n/2 \rfloor$ soll gelten $w\_i=1/n$. "Der zweite Teil" von `w` kann also erstellt werden, indem man `1/n` $n-\lfloor n/2 \rfloor$ mal erzeugt: 
+- Die Länge eines Vektors überprüfen Sie mit `length`.
+
+- Für $i > \lfloor n/2 \rfloor$ soll gelten $w\_i=1/n$. "Der zweite Teil" von `w` kann also erstellt werden, indem man `1/n` $n-\lfloor n/2 \rfloor$ mal erzeugt: 
 `rep(1/n,ceiling(n/2))`. Wie müssen Sie die ersten $\lfloor n/2 \rfloor$ Einträge erzeugen?
-<br><br>
-Kombinieren Sie beide Teile mit `c()`.
+
+- Kombinieren Sie beide Teile mit `c()`.
 
 *** =instructions
 Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br><br> <b>Hinweise</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`. Mit `floor` und `ceiling` können Sie ganzzahlig ab- bzw. aufrunden.
