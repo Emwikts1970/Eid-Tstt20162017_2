@@ -92,7 +92,7 @@ mod <- lm(XP ~ Z)
 ***=hint
 
 Die Funktion `summary` liefert Ihnen statistische Informationen über ein Modellobjekt. Der Eintrag `coefficients` enthält eine Matrix mit geschätzten Koeffizienten sowie deren Standardfehler.<br>
-Nützliche logische Operatoren sind `<` oder `>`. Die Länge eines Vektors bestimmen Sie mit `length`. Bedenken Sie: Es handelt sich um einen beidseitigen Test, d.h. sie suchen einen kritischen Wert $c\_{1-\frac{\alpha}{2}}$.
+Nützliche logische Operatoren sind `<` oder `>`. Die Länge eines Vektors bestimmen Sie mit `length`. $k$ ist die Anzahl der Regressoren im Modell. Bedenken Sie: Es handelt sich um einen beidseitigen Test, d.h. sie suchen einen kritischen Wert $c\_{1-\frac{\alpha}{2}}$.
 
 ***=sample_code
 ```{r}
@@ -232,6 +232,12 @@ for(i in 1:n) {
 mod <- lm(XP ~ Z)
 hcm <- vcovHC(mod, type = "HC0")
 ```
+
+***hint
+
+`coeftest` besitzt das Argument `vcov.`. Die angegebene Matrix wird als Varianz-Kovarianz-Matrix zum Berechnen robuster Teststatistiken verwendet.
+<br>
+Nützliche logische Operatoren sind `<` oder `>`. Die Länge eines Vektors bestimmen Sie mit `length`. $k$ ist die Anzahl der Regressoren im Modell. Bedenken Sie: Es handelt sich um einen beidseitigen Test, d.h. sie suchen einen kritischen Wert $c\_{1-\frac{\alpha}{2}}$.
 
 ***=instructions
 
