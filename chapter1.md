@@ -49,8 +49,8 @@ beta1 <- round(lm(XP ~ Z)$coefficients[2],4)
 
 *** =sct
 ```{r}
-test_object("beta0")
-test_object("beta1")
+test_object("beta0", incorrect_msg = "Sie haben das Objekt falsch definiert.")
+test_object("beta1", incorrect_msg = "Sie haben das Objekt falsch definiert.")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:5826368309
@@ -117,11 +117,11 @@ abs(tstat) >= qt(0.975, df = 103)
 
 *** =sct
 ```{r}
-test_predefined_objects("XP")
+test_predefined_objects("XP", incorrect_msg = "Sie haben ein vordefiniertes Objekt manipuliert. Aktualisieren Sie Ihre Session.")
 
-test_predefined_objects("Z")
+test_predefined_objects("Z", incorrect_msg = "Sie haben ein vordefiniertes Objekt manipuliert. Aktualisieren Sie Ihre Session.")
 
-test_object("tstat")
+test_object("tstat", incorrect_msg = "Sie haben das Objekt falsch definiert.")
 
 test_function("qt", args=c("p","df"), not_called_msg = "Sie haben die Quantilsfunktion der t-Verteilung nicht benutzt!")
 test_or(
@@ -205,7 +205,7 @@ dim(hcm)
 ```{r}
 test_function("library", args = "package")
 
-test_object("hcm")
+test_object("hcm", incorrect_msg = "Sie haben das Objekt falsch definiert.")
 
 test_function("dim", args = "x")
 ```
@@ -278,7 +278,7 @@ test_function("library")
 
 test_function("coeftest")
 
-test_object("tstat")
+test_object("tstat", incorrect_msg = "Sie haben das Objekt falsch definiert.")
 
 test_function("qt", args=c("p","df"), not_called_msg = "Sie haben die Quantilsfunktion der t-Verteilung nicht benutzt!")
 test_or(
@@ -481,8 +481,8 @@ for (i in 1:5000) {
 
 ```{r}
 test_student_typed("for (i in 1:5000)", not_typed_msg = "Benutzen Sie die vorgeschlagene for-Schleife!")
-test_object("ols", eq_condition = "equal")
-test_object("weighted.w", eq_condition = "equal")
+test_object("ols", eq_condition = "equal", incorrect_msg = "Sie haben das Objekt falsch definiert.")
+test_object("weighted.w", eq_condition = "equal", incorrect_msg = "Sie haben das Objekt falsch definiert.")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:86a8ca6d26
