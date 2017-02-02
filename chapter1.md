@@ -366,7 +366,7 @@ $\lfloor x \rfloor$ ist die nächste ganze Zahl kleiner als x.
 - Für $i > \lfloor n/2 \rfloor$ soll gelten $w\_i=1/n$. "Der zweite Teil" von `w` kann also erstellt werden, indem man `1/n` $n-\lfloor n/2 \rfloor$ mal erzeugt: 
 `rep(1/n,ceiling(n/2))`. <br> Wie müssen Sie die ersten $\lfloor n/2 \rfloor$ Einträge erzeugen?
 
-- Kombinieren Sie beide Teile mit `c()`
+- Kombinieren Sie beide Teile mit `c()` um den Vektor `w` zu erzeugen.
 
 *** =instructions
 Betrachten Sie den vorgegebenen Code in `script.R`. Wie müssen Sie den Vektor der Gewichte `w` definieren? Ersetzen Sie `???` mit dem korrekten Ausdruck! <br><br> <b>Hinweise</b>: Benutzen Sie die Funktion `rep`, siehe `?rep`. Mit `floor` und `ceiling` können Sie ganzzahlig ab- bzw. aufrunden.
@@ -419,7 +419,7 @@ Die Simulation soll die folgenden Schritte umfassen:
 2. Berechnen Sie die Schätzer mit den Funktionen `OLS` und `beta.w`. Speichern Sie die Resultate jeweils an der $i$-ten Stelle der Vektoren `ols` und `weighted.w` ab.
 3. Wiederholen Sie die Schritte 1. und 2. für $i=1,\dots,5000$.
 
-*Die Funktionen `OLS` und `beta.w` sind in ihrer Arbeitsumgebung verfügbar!*
+<b>*Die Funktionen `OLS` und `beta.w` sind in ihrer Arbeitsumgebung verfügbar!*</b>
 
 ***=pre_exercise_code
 
@@ -435,7 +435,11 @@ beta.w <- function(Y) {
     return(crossprod(w,Y)) # Skalarprodukt von w und Y
 }
 ```
+***=hint
 
+- Die Schleife muss `5000` mal durchlaufen
+- Einen `n`-elementigen Vektor mit `NA`s initialisieren Sie durch `rep(NA,n)`
+- Benutzen Sie die Funktionen `OLS` und `beta.w` um die Vektoren `ols` und `weighted.w` zu erzeugen
 
 ***=instructions
 - Initialisieren Sie zunächst die Vektoren `ols` und `weighted.w`, sodass beide Vektoren $5000$ Einträge `NA` aufweisen.
