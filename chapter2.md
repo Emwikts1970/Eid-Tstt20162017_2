@@ -15,7 +15,7 @@ Sie interessieren sich für das folgende Model:
   
   *Die Vektoren `XP` und `Z` sind in Ihrer Arbeitsumgebung verfügbar.*
   
-  ***=hint
+ ***=hint
 
 Lineare Modelle können Sie mit `lm` schätzen. Nutzten Sie `round` zum Runden. Die geschätzten Koeffizienten erhalten Sie z.B. mit `coefficients`.
 
