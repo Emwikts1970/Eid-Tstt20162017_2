@@ -1,8 +1,8 @@
 ---
-  title       : Teil 1
+title       : Teil 1
 description : 
 
---- type:NormalExercise lang:r xp:100 skills: key:d42a7e12e7
+--- type:NormalExercise lang:r xp:100 skills: key:9460450f83
 ## A1 Importieren eines Datensatzes in R
 
 In dieser Aufgabe sollen Sie eine .csv-Datei einlesen.
@@ -42,7 +42,7 @@ test_or({
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills: key:1b1856a93c
+--- type:NormalExercise lang:r xp:100 skills: key:1520b4481a
 ## A2 Beobachtungen anzeigen
 
 *Der Datensatz `cps` aus der vorherigen Aufgabe ist in Ihrer Arbeitsumgebung verfügbar!*
@@ -56,7 +56,7 @@ cps <- read.table("http://s3.amazonaws.com/assets.datacamp.com/production/course
 *** =instructions
 - Aus der Übung kennen Sie Möglichkeiten, die ersten `n` Reihen eines Objekts auszulesen. Lassen Sie sich die ersten 10 Beobachtungen der Tabelle `cps` anzeigen!
   
-  ***=hint
+***=hint
 
 Eine geeignete Funktion zum Anzeigen der ersten paar Beobachtungen ist `head`. Für weitere Hilfestellung, nutzen Sie die Hilfefunktion, indem Sie `?head` über die Konsole aufrufen.
 
@@ -82,7 +82,7 @@ test_or({
 })
 success_msg("Weiter so!")
 ```
---- type:NormalExercise lang:r xp:100 skills: key:476a3635e2
+--- type:NormalExercise lang:r xp:100 skills: key:bc357bbcd9
 ## A3 Deskriptive Statistiken
 
 *Der Datensatz `cps` aus der vorherigen Aufgabe ist in Ihrer Arbeitsumgebung verfügbar!*
@@ -121,7 +121,7 @@ test_function("summary", args="object", incorrect_msg = "Sie haben die Funktion 
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:200 skills: key:db567d5cd8
+--- type:NormalExercise lang:r xp:200 skills: key:7a67c1767e
 ## A4 Ein bearbeiteter Datensatz
 
 *Der Datensatz `cps` aus der vorherigen Aufgabe ist in Ihrer Arbeitsumgebung verfügbar!*
@@ -167,7 +167,7 @@ test_object("cps.neu", eq_condition = "equal",undefined_msg = "Sie haben das Obj
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:200 skills: key:c9801849a5
+--- type:NormalExercise lang:r xp:200 skills: key:8ab2683f27
 ## A5 Ändern der Kodierung von Variablen
 
 *Der Datensatz `cps.neu` aus der vorherigen Aufgabe ist in Ihrer Arbeitsumgebung verfügbar!*
@@ -219,7 +219,7 @@ test_object("cps.neu", eq_condition = "equal", incorrect_msg = "Das Objekt `cps.
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills: key:72fd3452d3
+--- type:NormalExercise lang:r xp:100 skills: key:630983012b
 ## B1 Ein Dummy-Regressionsmodell für den Stundenlohn 
 
 Sie vermuten die folgende Beziehung zwischen Studenlohn und Geschlecht:
@@ -276,7 +276,7 @@ test_or({
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills: key:257abcab71
+--- type:NormalExercise lang:r xp:100 skills: key:eec6cf522b
 ## B2 Das Modellobjekt
 
 *Der Datensatz `cps.neu` und das Modell `mod` aus der vorherigen Aufgabe sind in Ihrer Arbeitsumgebung verfügbar.*
@@ -335,7 +335,7 @@ test_or({
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:150 skills: key:3a4aca912c
+--- type:NormalExercise lang:r xp:150 skills: key:208c509b25
 ## B3 Koeffizienten und Konfidenzintervalle
 
 *Der Datensatz `cps.neu` und das Modell `mod` aus der vorherigen Aufgabe sind in Ihrer Arbeitsumgebung verfügbar!*
@@ -400,7 +400,7 @@ test_function("confint")
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:100 skills: key:59c08b546d
+--- type:NormalExercise lang:r xp:100 skills: key:415d04f6e8
 ## B4 Interpretation
 
 Betrachten Sie nun das zuvor geschätzte Regressionsmodel:
@@ -466,7 +466,7 @@ test_or({
 })
 ```
 
---- type:NormalExercise lang:r xp:200 skills: key:33e2772840
+--- type:NormalExercise lang:r xp:200 skills: key:5c10685f96
 ## B5 Modellgüte
 
 
@@ -522,7 +522,7 @@ test_object("R2")
 success_msg("Weiter so!")
 ```
 
---- type:NormalExercise lang:r xp:150 skills: key:68aef3bae2
+--- type:NormalExercise lang:r xp:150 skills: key:7097947953
 ## B6 Inferenz
 
 Betrachten Sie erneut das geschätzte Regressionsmodell:
